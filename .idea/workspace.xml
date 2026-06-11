@@ -4,54 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="7a57c0cb-3e96-4b47-8184-40eef87b31c8" name="변경" comment="unove 드가장">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/best-oil-desktop.png" beforeDir="false" afterPath="$PROJECT_DIR$/images/main/best-oil-desktop.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/best-perfume-desktop.png" beforeDir="false" afterPath="$PROJECT_DIR$/images/main/best-perfume-desktop.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/best-shampoo-desktop.png" beforeDir="false" afterPath="$PROJECT_DIR$/images/main/best-shampoo-desktop.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/best-treatment-desktop.png" beforeDir="false" afterPath="$PROJECT_DIR$/images/main/best-treatment-desktop.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/brand-desktop.mp4" beforeDir="false" afterPath="$PROJECT_DIR$/images/main/brand-desktop.mp4" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/facebook.png" beforeDir="false" afterPath="$PROJECT_DIR$/images/main/facebook.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/hero-desktop-01.png" beforeDir="false" afterPath="$PROJECT_DIR$/images/main/hero-desktop-01.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/hero-desktop-02.png" beforeDir="false" afterPath="$PROJECT_DIR$/images/main/hero-desktop-02.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/hero-desktop-03.png" beforeDir="false" afterPath="$PROJECT_DIR$/images/main/hero-desktop-03.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/hero-desktop-04.png" beforeDir="false" afterPath="$PROJECT_DIR$/images/main/hero-desktop-04.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/hero-desktop-05.png" beforeDir="false" afterPath="$PROJECT_DIR$/images/main/hero-desktop-05.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/hero-moblie-01.png" beforeDir="false" afterPath="$PROJECT_DIR$/images/main/hero-moblie-01.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/hero-moblie-02.png" beforeDir="false" afterPath="$PROJECT_DIR$/images/main/hero-moblie-02.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/hero-moblie-03.png" beforeDir="false" afterPath="$PROJECT_DIR$/images/main/hero-moblie-03.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/hero-moblie-04.png" beforeDir="false" afterPath="$PROJECT_DIR$/images/main/hero-moblie-04.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/hero-moblie-05.png" beforeDir="false" afterPath="$PROJECT_DIR$/images/main/hero-moblie-05.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/hero-tabelt-02.png" beforeDir="false" afterPath="$PROJECT_DIR$/images/main/hero-tabelt-02.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/hero-tabelt-03.png" beforeDir="false" afterPath="$PROJECT_DIR$/images/main/hero-tabelt-03.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/hero-tabelt-04.png" beforeDir="false" afterPath="$PROJECT_DIR$/images/main/hero-tabelt-04.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/hero-tabelt-05.png" beforeDir="false" afterPath="$PROJECT_DIR$/images/main/hero-tabelt-05.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/hero-tablet-01.png" beforeDir="false" afterPath="$PROJECT_DIR$/images/main/hero-tablet-01.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/icon-cart.png" beforeDir="false" afterPath="$PROJECT_DIR$/images/main/icon-cart.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/icon-search.png" beforeDir="false" afterPath="$PROJECT_DIR$/images/main/icon-search.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/icon-user.png" beforeDir="false" afterPath="$PROJECT_DIR$/images/main/icon-user.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/instagram.png" beforeDir="false" afterPath="$PROJECT_DIR$/images/main/instagram.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/review-1.png" beforeDir="false" afterPath="$PROJECT_DIR$/images/main/review-1.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/review-2.png" beforeDir="false" afterPath="$PROJECT_DIR$/images/main/review-2.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/review-3.png" beforeDir="false" afterPath="$PROJECT_DIR$/images/main/review-3.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/review-4.png" beforeDir="false" afterPath="$PROJECT_DIR$/images/main/review-4.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/review-5.png" beforeDir="false" afterPath="$PROJECT_DIR$/images/main/review-5.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/review-6.png" beforeDir="false" afterPath="$PROJECT_DIR$/images/main/review-6.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/review-7.png" beforeDir="false" afterPath="$PROJECT_DIR$/images/main/review-7.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/review-8.png" beforeDir="false" afterPath="$PROJECT_DIR$/images/main/review-8.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/story-thumb-1.png" beforeDir="false" afterPath="$PROJECT_DIR$/images/main/story-thumb-1.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/story-thumb-2.png" beforeDir="false" afterPath="$PROJECT_DIR$/images/main/story-thumb-2.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/story-thumb-3.png" beforeDir="false" afterPath="$PROJECT_DIR$/images/main/story-thumb-3.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/story-thumb-4.png" beforeDir="false" afterPath="$PROJECT_DIR$/images/main/story-thumb-4.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/story-thumb-5.png" beforeDir="false" afterPath="$PROJECT_DIR$/images/main/story-thumb-5.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/story-thumb-6.png" beforeDir="false" afterPath="$PROJECT_DIR$/images/main/story-thumb-6.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/css/index.css" beforeDir="false" afterPath="$PROJECT_DIR$/css/index.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/css/shop.css" beforeDir="false" afterPath="$PROJECT_DIR$/css/shop.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/html/shop.html" beforeDir="false" afterPath="$PROJECT_DIR$/html/shop.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/js/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/js/shop.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/shop.js" afterDir="false" />
-    </list>
+    <list default="true" id="7a57c0cb-3e96-4b47-8184-40eef87b31c8" name="변경" comment="unove 완성 1차" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -90,61 +43,61 @@
   </component>
   <component name="NextEditCompletionFeaturesState">
     <decayedCancelled>
-      <entry key="MS100" value="9.769124626840134E-7" />
-      <entry key="MS500" value="0.08687942996119132" />
-      <entry key="S2" value="1.3231923474235567" />
-      <entry key="S5" value="3.1203315517393033" />
-      <entry key="S10" value="4.602300929754956" />
-      <entry key="S30" value="6.876123256656395" />
-      <entry key="S60" value="8.65089220292584" />
-      <entry key="M2" value="11.087184298178784" />
-      <entry key="M5" value="17.273490988030904" />
-      <entry key="M10" value="26.216650890209166" />
-      <entry key="M15" value="33.80638664710535" />
-      <entry key="M30" value="49.16263728052783" />
-      <entry key="H1" value="69.36235184173925" />
-      <entry key="H2" value="106.8179386110038" />
-      <entry key="H4" value="158.6311854809725" />
-      <entry key="D1" value="250.22445826010178" />
-      <entry key="W1" value="273.77426288114907" />
+      <entry key="MS100" value="1.0000003588787907" />
+      <entry key="MS500" value="1.0514031483661141" />
+      <entry key="S2" value="1.487905593139947" />
+      <entry key="S5" value="1.9156849251981234" />
+      <entry key="S10" value="2.42600298660479" />
+      <entry key="S30" value="4.905105430417855" />
+      <entry key="S60" value="7.742028222138763" />
+      <entry key="M2" value="11.264123136781755" />
+      <entry key="M5" value="18.38573503197095" />
+      <entry key="M10" value="27.752904032356152" />
+      <entry key="M15" value="35.539615318607574" />
+      <entry key="M30" value="51.235501189500056" />
+      <entry key="H1" value="71.70641886028427" />
+      <entry key="H2" value="109.31245763850728" />
+      <entry key="H4" value="161.2557567909319" />
+      <entry key="D1" value="253.1257303735683" />
+      <entry key="W1" value="276.7588305144174" />
     </decayedCancelled>
     <decayedSelected>
-      <entry key="MS100" value="1.0" />
-      <entry key="MS500" value="1.0" />
-      <entry key="S2" value="1.0000000000129738" />
-      <entry key="S5" value="1.0000472614648566" />
-      <entry key="S10" value="1.0084070332976611" />
-      <entry key="S30" value="1.3090310888179701" />
-      <entry key="S60" value="1.7976646970698196" />
-      <entry key="M2" value="2.410936333927311" />
-      <entry key="M5" value="3.5207609728781732" />
-      <entry key="M10" value="4.7683524507723005" />
-      <entry key="M15" value="5.7995375491399495" />
-      <entry key="M30" value="8.234512250000659" />
-      <entry key="H1" value="13.473647485417162" />
-      <entry key="H2" value="26.183567116079608" />
-      <entry key="H4" value="44.37914853235923" />
-      <entry key="D1" value="76.3654751554429" />
-      <entry key="W1" value="84.53599134502818" />
+      <entry key="MS100" value="1.2616904921932635E-148" />
+      <entry key="MS500" value="2.6314223924946588E-30" />
+      <entry key="S2" value="4.02761214267118E-8" />
+      <entry key="S5" value="0.0011016397081958292" />
+      <entry key="S10" value="0.033469204828089266" />
+      <entry key="S30" value="0.42068123193161056" />
+      <entry key="S60" value="1.0190846915938712" />
+      <entry key="M2" value="1.8152503787899061" />
+      <entry key="M5" value="3.1429455641712765" />
+      <entry key="M10" value="4.505245975818917" />
+      <entry key="M15" value="5.584189364578914" />
+      <entry key="M30" value="8.08018429193883" />
+      <entry key="H1" value="13.34679142778048" />
+      <entry key="H2" value="26.06001485183338" />
+      <entry key="H4" value="44.27431889074556" />
+      <entry key="D1" value="76.33538123325329" />
+      <entry key="W1" value="84.53123143542264" />
     </decayedSelected>
     <decayedShown>
-      <entry key="MS100" value="1.2527192642878524E-5" />
-      <entry key="MS500" value="0.16507195933364044" />
-      <entry key="S2" value="1.6162019088310553" />
-      <entry key="S5" value="3.507639663029485" />
-      <entry key="S10" value="5.129406629244681" />
-      <entry key="S30" value="7.9371376021723785" />
-      <entry key="S60" value="10.294070408678301" />
-      <entry key="M2" value="13.39360559677013" />
-      <entry key="M5" value="20.725089931394397" />
-      <entry key="M10" value="30.936713684957336" />
-      <entry key="M15" value="39.567647282915495" />
-      <entry key="M30" value="57.372335658285714" />
-      <entry key="H1" value="82.81929625728093" />
-      <entry key="H2" value="132.9884537385155" />
-      <entry key="H4" value="203.00042980445886" />
-      <entry key="D1" value="326.5872844649541" />
-      <entry key="W1" value="358.3098392519974" />
+      <entry key="MS100" value="0.9726552916718325" />
+      <entry key="MS500" value="1.0454475309467506" />
+      <entry key="S2" value="1.485510819169491" />
+      <entry key="S5" value="1.91482216296764" />
+      <entry key="S10" value="2.4427195646970135" />
+      <entry key="S30" value="5.245771673374324" />
+      <entry key="S60" value="8.67337186764109" />
+      <entry key="M2" value="13.00059754548309" />
+      <entry key="M5" value="21.46690614255602" />
+      <entry key="M10" value="32.212507635236804" />
+      <entry key="M15" value="41.086937559616835" />
+      <entry key="M30" value="59.291330896100895" />
+      <entry key="H1" value="85.0366615943962" />
+      <entry key="H2" value="135.35948064678104" />
+      <entry key="H4" value="205.5201941460558" />
+      <entry key="D1" value="329.45846357979" />
+      <entry key="W1" value="361.2896469818349" />
     </decayedShown>
   </component>
   <component name="ProjectColorInfo">{
@@ -209,7 +162,7 @@
       <workItem from="1781073854442" duration="7029000" />
       <workItem from="1781136274870" duration="2767000" />
       <workItem from="1781139064234" duration="2196000" />
-      <workItem from="1781141568048" duration="13464000" />
+      <workItem from="1781141568048" duration="14174000" />
     </task>
     <task id="LOCAL-00001" summary="unove 드가장">
       <option name="closed" value="true" />
@@ -219,7 +172,15 @@
       <option name="project" value="LOCAL" />
       <updated>1781081292001</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="unove 완성 1차">
+      <option name="closed" value="true" />
+      <created>1781159323161</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1781159323161</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -227,6 +188,7 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="unove 드가장" />
-    <option name="LAST_COMMIT_MESSAGE" value="unove 드가장" />
+    <MESSAGE value="unove 완성 1차" />
+    <option name="LAST_COMMIT_MESSAGE" value="unove 완성 1차" />
   </component>
 </project>
