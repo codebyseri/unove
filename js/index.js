@@ -173,3 +173,40 @@ btnTop?.addEventListener("click", () => {
 btnInquiry?.addEventListener("click", () => {
 	showToast("1:1 고객센터 문의 창으로 연결합니다.");
 });
+
+document.addEventListener('DOMContentLoaded', () => {
+	const brandVisual = document.querySelector('.brand-visual');
+	const buttons = document.querySelectorAll('.thumbs button');
+	
+	// 1. 메인 이미지 태그를 HTML 구조 변경 없이 JS로 동적 생성하여 삽입
+	const mainImg = document.createElement('img');
+	mainImg.classList.add('main-image');
+	brandVisual.insertBefore(mainImg, brandVisual.firstChild);
+	
+	buttons.forEach((button, index) => {
+		button.addEventListener('click', () => {
+			// 모든 버튼에서 활성화 클래스 제거 후 현재 버튼에 추가
+			buttons.forEach(btn => btn.classList.remove('is-active'));
+			button.classList.add('is-active');
+			
+			// 클릭한 버튼 내부의 이미지 src 가져오기
+			const thumbImgSrc = button.querySelector('img').getAttribute('src');
+			
+			// 💡 1번 버튼(첫 번째 썸네일)을 누르면 영상을 보여주고, 나머지는 이미지를 보여주는 로직
+			if (index === 0) {
+				// 부드럽게 사라진 후 영상이 보이도록
+				mainImg.classList.remove('show');
+			} else {
+				// 부드러운 교차 효과를 위해 페이드 아웃 -> src 변경 -> 페이드 인 처리
+				mainImg.classList.remove('show');
+				
+				// 잠시 투명해진 틈을 타서 이미지를 바꾸고 다시 보여줌 (자연스러운 전환)
+				setTimeout(() => {
+					mainImg.src = thumbImgSrc;
+					mainImg.alt = button.querySelector('img').alt + " 메인";
+					mainImg.classList.add('show');
+				}, 50); // 0.05초 짧은 타이밍 조절
+			}
+		});
+	});
+});
