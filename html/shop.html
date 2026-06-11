@@ -1,13 +1,399 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="ko">
 <head>
-	<meta charset="UTF-8">
-	<meta name="viewport"
-	      content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
-	<meta http-equiv="X-UA-Compatible" content="ie=edge">
-	<title>Document</title>
+	<meta charset="UTF-8"/>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+	<title>UNOVE SHOP</title>
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;700&family=Playfair+Display:ital,wght@0,700;0,900;1,700;1,900&display=swap"/>
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"/>
+	<link rel="stylesheet" href="../css/shop.css"/>
+	<script src="../js/shop.js" defer></script>
 </head>
 <body>
 	
+	<div id="top-banner">
+		<p>신규 회원 가입하고 10% 할인 받기</p>
+		<button id="banner-close" aria-label="배너 닫기">
+			<i class="fa-solid fa-xmark"></i>
+		</button>
+	</div>
+	
+	<div class="header-wrapper">
+		<header id="header-desktop">
+			<div class="header-inner">
+				<span class="logo">
+					<a href="../index.html">
+						UNOVE
+					</a>
+				</span>
+				<nav class="gnb">
+					<a href="#">SHOP</a>
+					<a href="#">EVENT</a>
+					<a href="#">COMMUNITY</a>
+					<a href="#">STORY</a>
+				</nav>
+				<div class="header-right">
+					<div class="util-icons">
+						<button aria-label="검색">
+							<i class="fa-solid fa-magnifying-glass"></i>
+						</button>
+						<button aria-label="마이페이지">
+							<i class="fa-regular fa-user"></i>
+						</button>
+						<button aria-label="장바구니">
+							<i class="fa-solid fa-bag-shopping"></i>
+						</button>
+					</div>
+				</div>
+			</div>
+		</header>
+		
+		<header id="header-mobile">
+			<button class="mobile-menu-btn" aria-label="메뉴">
+				<i class="fa-solid fa-bars"></i>
+			</button>
+			<span class="mobile-logo">UNOVE</span>
+			<div class="mobile-icons">
+				<button aria-label="마이페이지">
+					<i class="fa-regular fa-user"></i>
+				</button>
+				<button aria-label="장바구니">
+					<i class="fa-solid fa-bag-shopping"></i>
+				</button>
+			</div>
+		</header>
+		
+		<div id="hero">
+			<img id="hero-desktop-img" src="../images/shop/hero-desktop.png" alt="UNOVE Brand Identity Visual"/>
+			<img id="hero-mobile-img" src="../images/shop/hero-mobile.png" alt="UNOVE Brand Identity Visual"/>
+		</div>
+	</div>
+	
+	<nav id="sub-nav">
+		<button class="cat-btn active" data-cat="ALL">ALL</button>
+		<button class="cat-btn" data-cat="BEST">BEST</button>
+		<button class="cat-btn" data-cat="NEW">NEW</button>
+		<button class="cat-btn" data-cat="SET/GIFT">SET/GIFT</button>
+	</nav>
+	
+	<div id="product-section">
+		
+		<div id="mobile-filters">
+			<button class="pill active" data-val="전체">전체</button>
+			<button class="pill" data-val="샴푸">샴푸</button>
+			<button class="pill" data-val="트리트먼트/헤어팩">트리트먼트/헤어팩</button>
+			<button class="pill" data-val="헤어케어">헤어케어</button>
+			<button class="pill" data-val="헤어스타일링">헤어스타일링</button>
+			<button class="pill" data-val="프래그런스">프래그런스</button>
+			<button class="pill" data-val="핸드/바디">핸드/바디</button>
+		</div>
+		
+		<div class="controls-row">
+			<span class="item-count">25 ITEMS</span>
+			<div class="item-menu">
+				<div class="sub-filters">
+					<button class="sf-btn active" data-val="전체">전체</button>
+					<button class="sf-btn" data-val="샴푸">샴푸</button>
+					<button class="sf-btn" data-val="트리트먼트/헤어팩">트리트먼트/헤어팩</button>
+					<button class="sf-btn" data-val="헤어케어">헤어케어</button>
+					<button class="sf-btn" data-val="헤어스타일링">헤어스타일링</button>
+					<button class="sf-btn" data-val="핸드/바디">핸드/바디</button>
+					<button class="sf-btn" data-val="프래그런스">프래그런스</button>
+				</div>
+				
+				<div class="sort-wrap">
+					<button id="sort-btn">
+						<span id="sort-label">추천순</span>
+						<i class="fa-solid fa-chevron-down"></i>
+					</button>
+					<ul id="sort-dropdown">
+						<li class="sort-opt">추천순</li>
+						<li class="sort-opt">리뷰많은순</li>
+						<li class="sort-opt">높은가격순</li>
+						<li class="sort-opt">낮은가격순</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+		
+		<div id="product-grid">
+			<article class="card">
+				<div class="card-img">
+					<img src="../images/shop/p1.png" alt="어노브 글로우 바디로션 290ml"/>
+				</div>
+				<div class="card-info">
+					<div class="card-txt">
+						<p class="card-name">어노브 글로우 바디로션 290ml</p>
+						<p class="card-desc">하루종일 촉촉하게, 건강한 광채 피부 완성</p>
+						<div class="price-row">
+							<p class="card-price">26,000<span>원</span></p>
+						</div>
+					</div>
+					<div class="card-actions">
+						<button class="wish-btn" aria-label="위시리스트"><i class="fa-regular fa-heart"></i></button>
+						<button class="cart-btn" aria-label="장바구니"><i class="fa-solid fa-cart-plus"></i></button>
+					</div>
+				</div>
+			</article>
+			<article class="card">
+				<div class="card-img">
+					<img src="../images/shop/p2.png" alt="어노브 글로우 바디워시 290ml"/>
+				</div>
+				<div class="card-info">
+					<div class="card-txt">
+						<p class="card-name">어노브 글로우 바디워시 290ml</p>
+						<p class="card-desc">세정 후에도 당김 없이, 건강한 광채 피부 완성</p>
+						<div class="price-row">
+							<p class="card-price">22,000<span>원</span></p>
+						</div>
+					</div>
+					<div class="card-actions">
+						<button class="wish-btn" aria-label="위시리스트"><i class="fa-regular fa-heart"></i></button>
+						<button class="cart-btn" aria-label="장바구니"><i class="fa-solid fa-cart-plus"></i></button>
+					</div>
+				</div>
+			</article>
+			<article class="card">
+				<div class="card-img">
+					<img src="../images/shop/p3.png" alt="어노브 글로우 크리미 바디스크럽 300g"/>
+				</div>
+				<div class="card-info">
+					<div class="card-txt">
+						<p class="card-name">어노브 글로우 크리미 바디스크럽 300g</p>
+						<p class="card-desc">각질 정돈을 넘어, 매끈하게 빛나는 결광까지</p>
+						<div class="price-row">
+							<p class="card-price">27,000<span>원</span></p>
+						</div>
+					</div>
+					<div class="card-actions">
+						<button class="wish-btn" aria-label="위시리스트"><i class="fa-regular fa-heart"></i></button>
+						<button class="cart-btn" aria-label="장바구니"><i class="fa-solid fa-cart-plus"></i></button>
+					</div>
+				</div>
+			</article>
+			<article class="card">
+				<div class="card-img">
+					<img src="../images/shop/p4.png" alt="어노브 글로우 핸드크림 40ml"/>
+				</div>
+				<div class="card-info">
+					<div class="card-txt">
+						<p class="card-name">어노브 글로우 핸드크림 40ml</p>
+						<p class="card-desc">고기능 결광케어 퍼퓸 핸드크림</p>
+						<div class="price-row">
+							<p class="card-price">15,000<span>원</span></p>
+						</div>
+					</div>
+					<div class="card-actions">
+						<button class="wish-btn" aria-label="위시리스트"><i class="fa-regular fa-heart"></i></button>
+						<button class="cart-btn" aria-label="장바구니"><i class="fa-solid fa-cart-plus"></i></button>
+					</div>
+				</div>
+			</article>
+			<article class="card">
+				<div class="card-img">
+					<img src="../images/shop/p5.png" alt="어노브 글로우 핸드워시 290ml"/>
+				</div>
+				<div class="card-info">
+					<div class="card-txt">
+						<p class="card-name">어노브 글로우 핸드워시 290ml</p>
+						<p class="card-desc">고보습 결광케어 퍼퓸 핸드워시</p>
+						<div class="price-row">
+							<p class="card-price">20,000<span>원</span></p>
+						</div>
+					</div>
+					<div class="card-actions">
+						<button class="wish-btn" aria-label="위시리스트"><i class="fa-regular fa-heart"></i></button>
+						<button class="cart-btn" aria-label="장바구니"><i class="fa-solid fa-cart-plus"></i></button>
+					</div>
+				</div>
+			</article>
+			<article class="card">
+				<div class="card-img">
+					<img src="../images/shop/p6.png" alt="어노브 프리즈 카밍 슬릭 헤어 피니싱 스틱"/>
+				</div>
+				<div class="card-info">
+					<div class="card-txt">
+						<p class="card-name">어노브 프리즈 카밍 슬릭 헤어 피니싱 스틱</p>
+						<p class="card-desc">24시간 뭉침 없이 확실한 잔머리 픽싱</p>
+						<div class="price-row">
+							<p class="card-price">18,000<span>원</span></p>
+						</div>
+					</div>
+					<div class="card-actions">
+						<button class="wish-btn" aria-label="위시리스트"><i class="fa-regular fa-heart"></i></button>
+						<button class="cart-btn" aria-label="장바구니"><i class="fa-solid fa-cart-plus"></i></button>
+					</div>
+				</div>
+			</article>
+			<article class="card">
+				<div class="card-img">
+					<img src="../images/shop/p7.png" alt="어노브 프리즈 카밍 슬릭 리브인 컨디셔너"/>
+				</div>
+				<div class="card-info">
+					<div class="card-txt">
+						<p class="card-name">어노브 프리즈 카밍 슬릭 리브인 컨디셔너</p>
+						<p class="card-desc">부스스한 모발도 매끈하게 슬릭 헤어 완성!</p>
+						<div class="price-row">
+							<p class="card-price">25,000<span>원</span></p>
+						</div>
+					</div>
+					<div class="card-actions">
+						<button class="wish-btn" aria-label="위시리스트"><i class="fa-regular fa-heart"></i></button>
+						<button class="cart-btn" aria-label="장바구니"><i class="fa-solid fa-cart-plus"></i></button>
+					</div>
+				</div>
+			</article>
+			<article class="card">
+				<div class="card-img">
+					<img src="../images/shop/p8.png" alt="어노브 오 드 퍼퓸 디스커버리 세트"/>
+				</div>
+				<div class="card-info">
+					<div class="card-txt">
+						<p class="card-name">어노브 오 드 퍼퓸 디스커버리 세트</p>
+						<p class="card-desc">당신만의 우아한 존재감을 더해 줄 감각적인 향</p>
+						<div class="price-row">
+							<p class="card-price">23,000<span>원</span></p>
+						</div>
+					</div>
+					<div class="card-actions">
+						<button class="wish-btn" aria-label="위시리스트"><i class="fa-regular fa-heart"></i></button>
+						<button class="cart-btn" aria-label="장바구니"><i class="fa-solid fa-cart-plus"></i></button>
+					</div>
+				</div>
+			</article>
+			<article class="card">
+				<div class="card-img">
+					<img src="../images/shop/p9.png" alt="어노브 향수 오 드 퍼퓸 + 미니듀오 증정"/>
+				</div>
+				<div class="card-info">
+					<div class="card-txt">
+						<p class="card-name">어노브 향수 오 드 퍼퓸 + 미니듀오 증정</p>
+						<p class="card-desc">포근하게 스며들어 오랫동안 살결에 남는 나만의 분위기</p>
+						<div class="price-row">
+							<p class="card-price">49,000<span>원</span></p>
+						</div>
+					</div>
+					<div class="card-actions">
+						<button class="wish-btn" aria-label="위시리스트"><i class="fa-regular fa-heart"></i></button>
+						<button class="cart-btn" aria-label="장바구니"><i class="fa-solid fa-cart-plus"></i></button>
+					</div>
+				</div>
+			</article>
+			<article class="card">
+				<div class="card-img">
+					<img src="../images/shop/p10.png" alt="어노브 헤어 퍼퓸 미스트"/>
+				</div>
+				<div class="card-info">
+					<div class="card-txt">
+						<p class="card-name">어노브 헤어 퍼퓸 미스트</p>
+						<p class="card-desc">향은 은은하게, 남기는 인상은 강렬하게</p>
+						<div class="price-row">
+							<p class="card-price">37,000<span>원</span></p>
+						</div>
+					</div>
+					<div class="card-actions">
+						<button class="wish-btn" aria-label="위시리스트"><i class="fa-regular fa-heart"></i></button>
+						<button class="cart-btn" aria-label="장바구니"><i class="fa-solid fa-cart-plus"></i></button>
+					</div>
+				</div>
+			</article>
+			<article class="card">
+				<div class="card-img">
+					<img src="../images/shop/p11.png" alt="어노브 딥 데미지 헤어 트리트먼트 EX"/>
+				</div>
+				<div class="card-info">
+					<div class="card-txt">
+						<p class="card-name">어노브 딥 데미지 헤어 트리트먼트 EX</p>
+						<p class="card-desc">단백질 집중 밀착! 극손상 클리닉 트리트먼트</p>
+						<div class="price-row">
+							<p class="card-price">19,000<span>원</span></p>
+							<p class="card-price-old">22,000원</p>
+						</div>
+					</div>
+					<div class="card-actions">
+						<button class="wish-btn" aria-label="위시리스트"><i class="fa-regular fa-heart"></i></button>
+						<button class="cart-btn" aria-label="장바구니"><i class="fa-solid fa-cart-plus"></i></button>
+					</div>
+				</div>
+			</article>
+			<article class="card">
+				<div class="card-img">
+					<img src="../images/shop/p12.png" alt="[대용량] 어노브 딥 데미지 헤어 트리트먼트"/>
+				</div>
+				<div class="card-info">
+					<div class="card-txt">
+						<p class="card-name">[대용량] 어노브 딥 데미지 헤어 트리트먼트</p>
+						<p class="card-desc">제품에 대한 설명 코멘트 어쩌구 저쩌구</p>
+						<div class="price-row">
+							<p class="card-price">22,000<span>원</span></p>
+							<p class="card-price-old">28,000원</p>
+						</div>
+					</div>
+					<div class="card-actions">
+						<button class="wish-btn" aria-label="위시리스트"><i class="fa-regular fa-heart"></i></button>
+						<button class="cart-btn" aria-label="장바구니"><i class="fa-solid fa-cart-plus"></i></button>
+					</div>
+				</div>
+			</article>
+		</div>
+		
+		<div id="pagination">
+			<button class="pg-arrow" aria-label="이전">
+				<i class="fa-solid fa-chevron-left"></i>
+			</button>
+			<button class="pg-btn active">1</button>
+			<button class="pg-btn">2</button>
+			<button class="pg-btn">3</button>
+			<button class="pg-arrow" aria-label="다음">
+				<i class="fa-solid fa-chevron-right"></i>
+			</button>
+		</div>
+	</div>
+	
+	<button id="more-btn">
+		MORE
+		<i class="fa-solid fa-chevron-right"></i>
+	</button>
+	
+	<footer class="footer">
+		<div class="footer-inner">
+			<div class="footer-info">
+				<strong class="footer-logo">UNOVE</strong>
+				<nav>
+					<a href="#">홈</a>
+					<a href="#">이용약관</a>
+					<a href="#"><b>개인정보처리방침</b></a>
+					<a href="#">이용안내</a>
+				</nav>
+				<p>© 2023 UNOVE</p>
+				<p>상호명 : <b>주식회사 와이어트</b><span class="pipe"></span>대표자 : <b>권규석</b></p>
+				<p>사업장 소재지 : 06097 세별빌딩 9층 서울특별시 강남구 봉은사로 427</p>
+				<p>사업자등록번호 : 120-86-08810 <b>[사업자정보확인]</b></p>
+				<p>통신판매업신고번호제 2021-서울강남-02122 호</p>
+				<p>계좌 정보613-000786-01-032 기업은행 (주)와이어트</p>
+				<p class="mail">대표메일 : un@wyattcorp.com<br/>글로벌 문의(US) : us.support@wyattcorp.com</p>
+				<p class="copyright">※ UNOVE에서 제공하는 모든 컨텐츠는 저작권법에 보호받는 저작물로서, 무단으로 복제, 배포하는 경우에는 저작권법에 의하여 처벌을 받을 수
+				                     있습니다.</p>
+			</div>
+			<div class="cs">
+				<h2>CS CENTER</h2>
+				<strong>1670-5875</strong>
+				<p>평일 <b>AM</b> 09:00 ~ <b>PM</b> 17:00</p>
+				<p>점심 <b>PM</b> 12:00 ~ <b>PM</b> 01:00</p>
+				<p>토/일요일 및 공휴일 휴무</p>
+			</div>
+			<div class="sns">
+				<h2>SNS</h2>
+				<a href="#" aria-label="Instagram"><img src="../images/main/instagram.png"
+				                                        alt=""/></a>
+				<a href="#" aria-label="Facebook"><img src="../images/main/facebook.png" alt=""/></a>
+			</div>
+		</div>
+	</footer>
+	
+	<div id="floating">
+		<button class="float-top" id="btn-top" aria-label="맨 위로"><i class="fa-solid fa-chevron-up"></i></button>
+		<button class="float-inquiry" aria-label="문의하기"><i class="fa-regular fa-comment-dots"></i></button>
+	</div>
 </body>
 </html>

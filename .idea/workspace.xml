@@ -4,7 +4,54 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="7a57c0cb-3e96-4b47-8184-40eef87b31c8" name="변경" comment="" />
+    <list default="true" id="7a57c0cb-3e96-4b47-8184-40eef87b31c8" name="변경" comment="unove 드가장">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/best-oil-desktop.png" beforeDir="false" afterPath="$PROJECT_DIR$/images/main/best-oil-desktop.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/best-perfume-desktop.png" beforeDir="false" afterPath="$PROJECT_DIR$/images/main/best-perfume-desktop.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/best-shampoo-desktop.png" beforeDir="false" afterPath="$PROJECT_DIR$/images/main/best-shampoo-desktop.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/best-treatment-desktop.png" beforeDir="false" afterPath="$PROJECT_DIR$/images/main/best-treatment-desktop.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/brand-desktop.mp4" beforeDir="false" afterPath="$PROJECT_DIR$/images/main/brand-desktop.mp4" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/facebook.png" beforeDir="false" afterPath="$PROJECT_DIR$/images/main/facebook.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/hero-desktop-01.png" beforeDir="false" afterPath="$PROJECT_DIR$/images/main/hero-desktop-01.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/hero-desktop-02.png" beforeDir="false" afterPath="$PROJECT_DIR$/images/main/hero-desktop-02.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/hero-desktop-03.png" beforeDir="false" afterPath="$PROJECT_DIR$/images/main/hero-desktop-03.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/hero-desktop-04.png" beforeDir="false" afterPath="$PROJECT_DIR$/images/main/hero-desktop-04.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/hero-desktop-05.png" beforeDir="false" afterPath="$PROJECT_DIR$/images/main/hero-desktop-05.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/hero-moblie-01.png" beforeDir="false" afterPath="$PROJECT_DIR$/images/main/hero-moblie-01.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/hero-moblie-02.png" beforeDir="false" afterPath="$PROJECT_DIR$/images/main/hero-moblie-02.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/hero-moblie-03.png" beforeDir="false" afterPath="$PROJECT_DIR$/images/main/hero-moblie-03.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/hero-moblie-04.png" beforeDir="false" afterPath="$PROJECT_DIR$/images/main/hero-moblie-04.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/hero-moblie-05.png" beforeDir="false" afterPath="$PROJECT_DIR$/images/main/hero-moblie-05.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/hero-tabelt-02.png" beforeDir="false" afterPath="$PROJECT_DIR$/images/main/hero-tabelt-02.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/hero-tabelt-03.png" beforeDir="false" afterPath="$PROJECT_DIR$/images/main/hero-tabelt-03.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/hero-tabelt-04.png" beforeDir="false" afterPath="$PROJECT_DIR$/images/main/hero-tabelt-04.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/hero-tabelt-05.png" beforeDir="false" afterPath="$PROJECT_DIR$/images/main/hero-tabelt-05.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/hero-tablet-01.png" beforeDir="false" afterPath="$PROJECT_DIR$/images/main/hero-tablet-01.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/icon-cart.png" beforeDir="false" afterPath="$PROJECT_DIR$/images/main/icon-cart.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/icon-search.png" beforeDir="false" afterPath="$PROJECT_DIR$/images/main/icon-search.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/icon-user.png" beforeDir="false" afterPath="$PROJECT_DIR$/images/main/icon-user.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/instagram.png" beforeDir="false" afterPath="$PROJECT_DIR$/images/main/instagram.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/review-1.png" beforeDir="false" afterPath="$PROJECT_DIR$/images/main/review-1.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/review-2.png" beforeDir="false" afterPath="$PROJECT_DIR$/images/main/review-2.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/review-3.png" beforeDir="false" afterPath="$PROJECT_DIR$/images/main/review-3.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/review-4.png" beforeDir="false" afterPath="$PROJECT_DIR$/images/main/review-4.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/review-5.png" beforeDir="false" afterPath="$PROJECT_DIR$/images/main/review-5.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/review-6.png" beforeDir="false" afterPath="$PROJECT_DIR$/images/main/review-6.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/review-7.png" beforeDir="false" afterPath="$PROJECT_DIR$/images/main/review-7.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/review-8.png" beforeDir="false" afterPath="$PROJECT_DIR$/images/main/review-8.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/story-thumb-1.png" beforeDir="false" afterPath="$PROJECT_DIR$/images/main/story-thumb-1.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/story-thumb-2.png" beforeDir="false" afterPath="$PROJECT_DIR$/images/main/story-thumb-2.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/story-thumb-3.png" beforeDir="false" afterPath="$PROJECT_DIR$/images/main/story-thumb-3.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/story-thumb-4.png" beforeDir="false" afterPath="$PROJECT_DIR$/images/main/story-thumb-4.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/story-thumb-5.png" beforeDir="false" afterPath="$PROJECT_DIR$/images/main/story-thumb-5.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/story-thumb-6.png" beforeDir="false" afterPath="$PROJECT_DIR$/images/main/story-thumb-6.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/css/index.css" beforeDir="false" afterPath="$PROJECT_DIR$/css/index.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/css/shop.css" beforeDir="false" afterPath="$PROJECT_DIR$/css/shop.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/html/shop.html" beforeDir="false" afterPath="$PROJECT_DIR$/html/shop.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/js/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/js/shop.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/shop.js" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -25,67 +72,79 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;,
+    &quot;assignee&quot;: &quot;Kkang109&quot;
+  }
+}</component>
+  <component name="GithubPullRequestsUISettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;url&quot;: &quot;https://github.com/Kkang109/unove.git&quot;,
+    &quot;accountId&quot;: &quot;62a85d2c-c1fc-4004-ace9-67f544c57447&quot;
+  }
+}</component>
   <component name="McpProjectServerCommands">
     <commands />
     <urls />
   </component>
   <component name="NextEditCompletionFeaturesState">
     <decayedCancelled>
-      <entry key="MS100" value="1.0" />
-      <entry key="MS500" value="1.0" />
-      <entry key="S2" value="1.0" />
-      <entry key="S5" value="1.0000000476810142" />
-      <entry key="S10" value="1.0006276168251222" />
-      <entry key="S30" value="1.389828193380341" />
-      <entry key="S60" value="3.032688367142606" />
-      <entry key="M2" value="5.933889143388304" />
-      <entry key="M5" value="10.345806894781036" />
-      <entry key="M10" value="14.670982396401964" />
-      <entry key="M15" value="18.987075784078932" />
-      <entry key="M30" value="30.714522413786828" />
-      <entry key="H1" value="44.88237767035469" />
-      <entry key="H2" value="56.71462433541354" />
-      <entry key="H4" value="64.51938857419239" />
-      <entry key="D1" value="72.2869562943825" />
-      <entry key="W1" value="73.75178074999832" />
+      <entry key="MS100" value="9.769124626840134E-7" />
+      <entry key="MS500" value="0.08687942996119132" />
+      <entry key="S2" value="1.3231923474235567" />
+      <entry key="S5" value="3.1203315517393033" />
+      <entry key="S10" value="4.602300929754956" />
+      <entry key="S30" value="6.876123256656395" />
+      <entry key="S60" value="8.65089220292584" />
+      <entry key="M2" value="11.087184298178784" />
+      <entry key="M5" value="17.273490988030904" />
+      <entry key="M10" value="26.216650890209166" />
+      <entry key="M15" value="33.80638664710535" />
+      <entry key="M30" value="49.16263728052783" />
+      <entry key="H1" value="69.36235184173925" />
+      <entry key="H2" value="106.8179386110038" />
+      <entry key="H4" value="158.6311854809725" />
+      <entry key="D1" value="250.22445826010178" />
+      <entry key="W1" value="273.77426288114907" />
     </decayedCancelled>
     <decayedSelected>
-      <entry key="MS100" value="0.0" />
-      <entry key="MS500" value="9.307106538006072E-197" />
-      <entry key="S2" value="1.116000385163124E-49" />
-      <entry key="S5" value="3.617609649376253E-20" />
-      <entry key="S10" value="2.6392715645685007E-10" />
-      <entry key="S30" value="0.0010137942511721616" />
-      <entry key="S60" value="0.04500395506037695" />
-      <entry key="M2" value="0.3000298232503169" />
-      <entry key="M5" value="1.0101778190873827" />
-      <entry key="M10" value="2.271602567735673" />
-      <entry key="M15" value="3.751054479406473" />
-      <entry key="M30" value="7.588364866337751" />
-      <entry key="H1" value="12.011343590977171" />
-      <entry key="H2" value="15.66110036809527" />
-      <entry key="H4" value="18.068251804600994" />
-      <entry key="D1" value="20.46943854544712" />
-      <entry key="W1" value="20.923097030322776" />
+      <entry key="MS100" value="1.0" />
+      <entry key="MS500" value="1.0" />
+      <entry key="S2" value="1.0000000000129738" />
+      <entry key="S5" value="1.0000472614648566" />
+      <entry key="S10" value="1.0084070332976611" />
+      <entry key="S30" value="1.3090310888179701" />
+      <entry key="S60" value="1.7976646970698196" />
+      <entry key="M2" value="2.410936333927311" />
+      <entry key="M5" value="3.5207609728781732" />
+      <entry key="M10" value="4.7683524507723005" />
+      <entry key="M15" value="5.7995375491399495" />
+      <entry key="M30" value="8.234512250000659" />
+      <entry key="H1" value="13.473647485417162" />
+      <entry key="H2" value="26.183567116079608" />
+      <entry key="H4" value="44.37914853235923" />
+      <entry key="D1" value="76.3654751554429" />
+      <entry key="W1" value="84.53599134502818" />
     </decayedSelected>
     <decayedShown>
-      <entry key="MS100" value="0.6973718331752027" />
-      <entry key="MS500" value="0.9304496577030154" />
-      <entry key="S2" value="0.9821395952633915" />
-      <entry key="S5" value="0.992817233127709" />
-      <entry key="S10" value="0.9970021909347563" />
-      <entry key="S30" value="1.3839744671006262" />
-      <entry key="S60" value="3.0615051873620382" />
-      <entry key="M2" value="6.212892831903983" />
-      <entry key="M5" value="11.338692102206549" />
-      <entry key="M10" value="16.927317624911797" />
-      <entry key="M15" value="22.723001729405343" />
-      <entry key="M30" value="38.28928640060843" />
-      <entry key="H1" value="56.88369452821572" />
-      <entry key="H2" value="72.36944859718987" />
-      <entry key="H4" value="82.58409812068298" />
-      <entry key="D1" value="92.75573853975744" />
-      <entry key="W1" value="94.67478226178507" />
+      <entry key="MS100" value="1.2527192642878524E-5" />
+      <entry key="MS500" value="0.16507195933364044" />
+      <entry key="S2" value="1.6162019088310553" />
+      <entry key="S5" value="3.507639663029485" />
+      <entry key="S10" value="5.129406629244681" />
+      <entry key="S30" value="7.9371376021723785" />
+      <entry key="S60" value="10.294070408678301" />
+      <entry key="M2" value="13.39360559677013" />
+      <entry key="M5" value="20.725089931394397" />
+      <entry key="M10" value="30.936713684957336" />
+      <entry key="M15" value="39.567647282915495" />
+      <entry key="M30" value="57.372335658285714" />
+      <entry key="H1" value="82.81929625728093" />
+      <entry key="H2" value="132.9884537385155" />
+      <entry key="H4" value="203.00042980445886" />
+      <entry key="D1" value="326.5872844649541" />
+      <entry key="W1" value="358.3098392519974" />
     </decayedShown>
   </component>
   <component name="ProjectColorInfo">{
@@ -97,31 +156,35 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "DefaultHtmlFileTemplate": "HTML File",
-    "ModuleVcsDetector.initialDetectionPerformed": "true",
-    "RunOnceActivity.MCP Project settings loaded": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "RunOnceActivity.typescript.service.memoryLimit.init": "true",
-    "com.intellij.ml.llm.matterhorn.ej.ui.settings.DefaultModelSelectionForGA.v1": "true",
-    "git-widget-placeholder": "master",
-    "javascript.preferred.runtime.type.id": "node",
-    "junie.onboarding.icon.badge.shown": "true",
-    "last_opened_file_path": "C:/Users/d/Desktop/웹A_미진/unove",
-    "list.type.of.created.stylesheet": "CSS",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "settings.editor.selected.configurable": "CodeWithMe",
-    "to.speed.mode.migration.done": "true",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;ASKED_SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;DefaultHtmlFileTemplate&quot;: &quot;HTML File&quot;,
+    &quot;ModuleVcsDetector.initialDetectionPerformed&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.MCP Project settings loaded&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.typescript.service.memoryLimit.init&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;com.intellij.ml.llm.matterhorn.ej.ui.settings.DefaultModelSelectionForGA.v1&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
+    &quot;javascript.preferred.runtime.type.id&quot;: &quot;node&quot;,
+    &quot;junie.onboarding.icon.badge.shown&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/d/Desktop/웹A_미진/unove&quot;,
+    &quot;list.type.of.created.stylesheet&quot;: &quot;CSS&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;CodeWithMe&quot;,
+    &quot;to.speed.mode.migration.done&quot;: &quot;true&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\d\Desktop\웹A_미진\unove\images" />
       <recent name="C:\Users\d\Desktop\웹A_미진\unove" />
       <recent name="C:\Users\d\Desktop\웹A_미진\unove\css\js" />
       <recent name="C:\Users\d\Desktop\웹A_미진\unove\css" />
@@ -143,11 +206,27 @@
       <option name="presentableId" value="Default" />
       <updated>1781073660962</updated>
       <workItem from="1781073662368" duration="165000" />
-      <workItem from="1781073854442" duration="6955000" />
+      <workItem from="1781073854442" duration="7029000" />
+      <workItem from="1781136274870" duration="2767000" />
+      <workItem from="1781139064234" duration="2196000" />
+      <workItem from="1781141568048" duration="13464000" />
     </task>
+    <task id="LOCAL-00001" summary="unove 드가장">
+      <option name="closed" value="true" />
+      <created>1781081292001</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1781081292001</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="unove 드가장" />
+    <option name="LAST_COMMIT_MESSAGE" value="unove 드가장" />
   </component>
 </project>

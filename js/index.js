@@ -1,135 +1,175 @@
-const promo = document.querySelector(".promo");
-const promoClose = document.querySelector(".promo-close");
-const header = document.querySelector(".site-header");
-const drawer = document.querySelector(".mobile-drawer");
-const mobileMenu = document.querySelector(".mobile-menu");
+/* ==========================================================================
+   DOM ELEMENTS SELECTORS (HTML 구조 기반 매칭)
+   ========================================================================== */
+const topBanner = document.querySelector("#top-banner");
+const bannerClose = document.querySelector("#banner-close");
+const headerDesktop = document.querySelector("#header-desktop");
+const headerMobile = document.querySelector("#header-mobile");
+const mobileMenuBtn = document.querySelector(".mobile-menu-btn");
 const toast = document.querySelector(".toast");
-
-const slides = [
-	{badge: "NEW", title: "Sleek on the go", text: "어노브 프리즈카밍 출시"},
-	{badge: "BEST", title: "Deep damage care", text: "단백질 집중 밀착 트리트먼트"},
-	{badge: "SCENT", title: "Soft elegance", text: "오래 남는 어노브의 향"},
-	{badge: "HAIR", title: "Silky finish", text: "가볍게 빛나는 헤어 오일"},
-	{badge: "UNOVE", title: "Your mood", text: "나만의 분위기를 완성하세요"},
-];
 
 let slideIndex = 0;
 let toastTimer;
 
+/* ==========================================================================
+   TOAST NOTIFICATION LOGIC
+   ========================================================================== */
 function showToast(message) {
 	if (!toast) return;
 	toast.textContent = message;
 	toast.classList.add("is-visible");
 	clearTimeout(toastTimer);
-	toastTimer = setTimeout(() => toast.classList.remove("is-visible"), 1500);
+	toastTimer = setTimeout(() => {
+		toast.classList.remove("is-visible");
+	}, 1500);
 }
-
-function closeDrawer() {
-	drawer?.classList.remove("is-open");
-	header?.classList.remove("is-menu-open");
-	document.body.classList.remove("drawer-open");
-	mobileMenu?.setAttribute("aria-expanded", "false");
-}
-
-promoClose?.addEventListener("click", () => {
-	promo?.classList.add("is-hidden");
-	header?.classList.add("is-banner-closed");
-	drawer?.classList.add("is-banner-closed");
-});
-
-mobileMenu?.addEventListener("click", () => {
-	const willOpen = !drawer?.classList.contains("is-open");
-	drawer?.classList.toggle("is-open", willOpen);
-	header?.classList.toggle("is-menu-open", willOpen);
-	document.body.classList.toggle("drawer-open", willOpen);
-	mobileMenu.setAttribute("aria-expanded", String(willOpen));
-});
-
-drawer?.querySelectorAll("a").forEach((link) => {
-	link.addEventListener("click", closeDrawer);
-});
-
-window.addEventListener("scroll", () => {
-	header?.classList.toggle("is-scrolled", window.scrollY > 24);
-});
 
 /* ==========================================================================
-   HERO BANNER SLIDER LOGIC (페이드 인아웃 반영)
+   BANNER & NAVIGATION EVENT LISTENERS
    ========================================================================== */
-const heroSlides = document.querySelectorAll(".hero .slide");
+// 상단 띠배너 닫기 이벤트 (데스크톱 및 모바일 헤더 top 위치 보정 클래스 추가)
+bannerClose?.addEventListener("click", () => {
+	topBanner?.remove(); // 배너 제거
+	headerDesktop?.classList.add("is-banner-closed");
+	headerMobile?.classList.add("is-banner-closed");
+});
+
+// 스크롤 시 헤더 배경 처리 (배너가 있든 없든 스크롤 감지)
+window.addEventListener("scroll", () => {
+	const isScrolled = window.scrollY > 24;
+	headerDesktop?.classList.toggle("is-scrolled", isScrolled);
+	headerMobile?.classList.toggle("is-scrolled", isScrolled);
+});
+
+// 모바일 메뉴 버튼 인터랙션
+if (mobileMenuBtn) {
+	// HTML 표준 웹접근성을 위해 기본 aria-expanded 속성 초기화 추가
+	mobileMenuBtn.setAttribute("aria-expanded", "false");
+	
+	mobileMenuBtn.addEventListener("click", () => {
+		const expanded = mobileMenuBtn.getAttribute("aria-expanded") === "true";
+		mobileMenuBtn.setAttribute("aria-expanded", String(!expanded));
+		showToast(expanded ? "메뉴를 닫았습니다." : "메뉴를 열었습니다.");
+	});
+}
+
+/* ==========================================================================
+   MAIN HERO BANNER SLIDER LOGIC
+   ========================================================================== */
+const heroSlides = document.querySelectorAll("#hero .slide");
 const currentSlide = document.querySelector(".current-slide");
 const progress = document.querySelector(".slider-indicator b");
 
-// [초기화] 새로고침 시 첫 번째 슬라이드 강제 활성화 처리
-if (heroSlides.length > 0) {
-	heroSlides[0].classList.add("is-active");
+// 슬라이더 바 상태를 업데이트하는 공통 함수
+function updateSliderProgress(index) {
+	if (currentSlide) {
+		currentSlide.textContent = String(index + 1).padStart(2, "0");
+	}
+	if (progress && heroSlides.length > 0) {
+		const percent = ((index + 1) / heroSlides.length) * 100;
+		progress.style.setProperty("--progress", `${percent}%`);
+	}
 }
 
+// 첫 번째 슬라이드 및 프로그레스 바 초기화 상태 지정
+if (heroSlides.length > 0) {
+	heroSlides.forEach((slide, idx) => {
+		slide.classList.toggle("is-active", idx === 0);
+	});
+	updateSliderProgress(0); // 01번 슬라이드 게이지(20%) 선반영
+}
+
+// 3.6초 순환 슬라이더 타이머
 setInterval(() => {
 	if (heroSlides.length === 0) return;
 	
-	// 1. 기존 활성화 슬라이드 클래스 제거
+	// 1. 현재 활성화 슬라이드 해제
 	heroSlides[slideIndex].classList.remove("is-active");
 	
-	// 2. 다음 인덱스로 순환 계산
+	// 2. 인덱스 순환 계산
 	slideIndex = (slideIndex + 1) % heroSlides.length;
 	
-	// 3. 새 슬라이드 활성화 (CSS 페이드 인 실행됨)
+	// 3. 다음 슬라이드 페이드인 활성화
 	heroSlides[slideIndex].classList.add("is-active");
 	
-	// 4. 숫자 인디케이터 변경 (01, 02...)
-	if (currentSlide) {
-		currentSlide.textContent = String(slideIndex + 1).padStart(2, "0");
-	}
-	
-	// 5. 밑면 게이지 프로그레스 바 채우기
-	if (progress) {
-		progress.style.setProperty("--progress", `${((slideIndex + 1) / heroSlides.length) * 100}%`);
-	}
+	// 4. 게이지 바 및 숫자 인디케이터 동기화
+	updateSliderProgress(slideIndex);
 }, 3600);
 
 /* ==========================================================================
-   BUTTONS & ACTIONS
+   PRODUCT INTERACTIONS (LIKE & BAG)
    ========================================================================== */
 document.querySelectorAll(".like-button").forEach((button) => {
-	button.addEventListener("click", () => {
+	button.addEventListener("click", (e) => {
+		e.preventDefault();
 		button.classList.toggle("is-active");
-		showToast(button.classList.contains("is-active") ? "찜 목록에 추가했어요" : "찜 목록에서 삭제했어요");
+		const isActive = button.classList.contains("is-active");
+		showToast(isActive ? "찜 목록에 추가했어요 ♥" : "찜 목록에서 삭제했어요 ♡");
 	});
 });
 
 document.querySelectorAll(".bag-button").forEach((button) => {
-	button.addEventListener("click", () => {
-		button.classList.add("is-active");
-		showToast("장바구니에 담았어요");
+	button.addEventListener("click", (e) => {
+		e.preventDefault();
+		button.classList.toggle("is-active");
+		const isActive = button.classList.contains("is-active");
+		showToast(isActive ? "장바구니에 담았어요" : "장바구니에서 뺐어요");
 	});
 });
 
-const brandMain = document.querySelector(".brand-main");
+/* ==========================================================================
+   BRAND VISUAL THUMBNAILS CONTROL
+   ========================================================================== */
+const brandVideo = document.querySelector(".brand-visual video");
+
 document.querySelectorAll(".thumbs button").forEach((button) => {
 	button.addEventListener("click", () => {
-		if (!brandMain) return;
-		document.querySelectorAll(".thumbs button").forEach((item) => item.classList.remove("is-active"));
+		// 모든 썸네일 활성화 해제 후 현재 타겟 활성화
+		document.querySelectorAll(".thumbs button").forEach((item) => {
+			item.classList.remove("is-active");
+		});
 		button.classList.add("is-active");
-		brandMain.classList.add("is-changing");
-		setTimeout(() => {
-			brandMain.src = button.querySelector("img").src;
-			brandMain.classList.remove("is-changing");
-		}, 160);
+		
+		// 비디오 소스 핸들링 예외 처리 (썸네일 클릭 시 영상 초기화 재생 효과)
+		if (brandVideo) {
+			brandVideo.currentTime = 0;
+			brandVideo.play().catch(() => {});
+			showToast("선택한 브랜드 컷을 재생합니다.");
+		}
 	});
 });
 
+/* ==========================================================================
+   PHOTO REVIEWS SLIDE STRIP
+   ========================================================================== */
 const reviewStrip = document.querySelector(".review-strip");
-document.querySelector(".review-nav.prev")?.addEventListener("click", () => {
-	reviewStrip?.scrollBy({left: -220, behavior: "smooth"});
+const prevReviewBtn = document.querySelector(".review-nav.prev");
+const nextReviewBtn = document.querySelector(".review-nav.next");
+
+// CSS 반응형 크기(180px + gap 16px)를 고려해 최적의 이동 거리 계산
+// 데스크톱(너비 > 768px)은 약 2개 아이템 분량(392px), 모바일 패드는 1개 분량(196px) 이동
+prevReviewBtn?.addEventListener("click", () => {
+	const scrollAmount = window.innerWidth <= 1200 ? 196 : 392;
+	reviewStrip?.scrollBy({ left: -scrollAmount, behavior: "smooth" });
 });
 
-document.querySelector(".review-nav.next")?.addEventListener("click", () => {
-	reviewStrip?.scrollBy({left: 220, behavior: "smooth"});
+nextReviewBtn?.addEventListener("click", () => {
+	const scrollAmount = window.innerWidth <= 1200 ? 196 : 392;
+	reviewStrip?.scrollBy({ left: scrollAmount, behavior: "smooth" });
 });
 
-document.querySelectorAll(".top-button, .contact-button").forEach((button) => {
-	button.addEventListener("click", () => {
-		window.scrollTo({top: 0, behavior: "smooth"});
-	});
+/* ==========================================================================
+   FLOATING INTERACTION BUTTONS
+   ========================================================================== */
+const btnTop = document.querySelector("#btn-top");
+const btnInquiry = document.querySelector(".float-inquiry");
+
+// 1. 맨 위로 가기 버튼 (아이디 매칭 수정 완료)
+btnTop?.addEventListener("click", () => {
+	window.scrollTo({ top: 0, behavior: "smooth" });
+});
+
+// 2. 문의하기 버튼 클릭 인터랙션 분리
+btnInquiry?.addEventListener("click", () => {
+	showToast("1:1 고객센터 문의 창으로 연결합니다.");
 });

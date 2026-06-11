@@ -1,0 +1,1015 @@
+/* ════════════════ 🌐 SUIT 한글 웹폰트 패키지 정의 ════════════════ */
+@font-face {
+    font-family: 'Suit';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_suit@1.0/SUIT-Thin.woff2') format('woff2');
+    font-weight: 100;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Suit';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_suit@1.0/SUIT-ExtraLight.woff2') format('woff2');
+    font-weight: 200;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Suit';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_suit@1.0/SUIT-Light.woff2') format('woff2');
+    font-weight: 300;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Suit';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_suit@1.0/SUIT-Regular.woff2') format('woff2');
+    font-weight: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Suit';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_suit@1.0/SUIT-Medium.woff2') format('woff2');
+    font-weight: 500;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Suit';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_suit@1.0/SUIT-SemiBold.woff2') format('woff2');
+    font-weight: 600;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Suit';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_suit@1.0/SUIT-Bold.woff2') format('woff2');
+    font-weight: 700;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Suit';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_suit@1.0/SUIT-ExtraBold.woff2') format('woff2');
+    font-weight: 800;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Suit';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_suit@1.0/SUIT-Heavy.woff2') format('woff2');
+    font-weight: 900;
+    font-display: swap;
+}
+
+/* ════════════════ 공통 초기화 및 폰트 세팅 ════════════════ */
+:root {
+    --navy: #101a33;
+    --pink: #f3d4d4;
+    --accent: #ffaac9;
+    --text: #323232;
+    --footer: rgba(235, 235, 235, 0.96);
+    --content: min(75vw, 1440px);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Suit', sans-serif; /* 기본 서체를 SUIT로 변경 */
+    color: #101A33;
+    background-color: #fff;
+    -webkit-font-smoothing: antialiased;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+button {
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 0;
+    font-family: inherit;
+}
+
+/* ════════════════ 띠배너 컴포넌트 ════════════════ */
+#top-banner {
+    position: relative;
+    background-color: #f6e6e6;
+    height: 38px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 110;
+    cursor: pointer;
+}
+
+#top-banner p {
+    font-size: 12px;
+    font-weight: 600;
+    color: #101A33;
+    letter-spacing: -0.2px;
+    display: block;
+}
+
+#top-banner button {
+    position: absolute;
+    right: 24px;
+    top: 50%;
+    transform: translateY(-50%);
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    color: #101A33;
+    font-size: 14px;
+    opacity: 0.5;
+    transition: opacity 0.2s;
+}
+
+#top-banner button:hover {
+    opacity: 1;
+}
+
+/* ════════════════ 투명 헤더 절대 배치 상위 축 ════════════════ */
+.header-wrapper {
+    position: relative;
+    width: 100%;
+}
+
+/* ════════════════ 데스크톱 상단 투명 헤더 ════════════════ */
+#header-desktop {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 80px;
+    z-index: 100;
+    background-color: transparent;
+    transition: background-color 0.3s ease;
+
+    &:hover {
+        background-color: #fff;
+
+        .logo {
+            color: #111a30;
+        }
+
+        .gnb a {
+            color: #111a30;
+
+            &:hover {
+                color: #FFAAC9;
+                opacity: 1;
+            }
+        }
+
+        .util-icons button {
+            color: #111a30;
+
+            &:hover {
+                color: #FFAAC9;
+                opacity: 1;
+            }
+        }
+    }
+}
+
+.header-inner {
+    max-width: 1440px;
+    height: 100%;
+    margin: 0 auto;
+    padding: 0 40px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+/* 브랜드 메인 로고 (Playfair Display 정직한 볼드 고정) */
+.logo {
+    font-family: 'Playfair Display', serif;
+    font-size: 40px;
+    font-weight: 700;
+    color: #fff;
+    letter-spacing: 1.5px;
+    cursor: pointer;
+    font-style: normal;
+}
+
+/* 주 네비게이션 */
+.gnb {
+    display: flex;
+    gap: 48px;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.gnb a {
+    font-family: 'Playfair Display', serif;
+    font-size: 24px;
+    font-weight: 700;
+    color: #fff;
+    letter-spacing: 1px;
+    opacity: 1;
+    font-style: normal;
+}
+
+/* 우측 유틸리티 영역 */
+.header-right {
+    display: flex;
+    align-items: center;
+    gap: 28px;
+}
+
+.util-icons {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.util-icons button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 24px;
+    height: 24px;
+    color: #fff;
+}
+
+.util-icons .fa-magnifying-glass {
+    font-size: 18px;
+}
+
+.util-icons .fa-user {
+    font-size: 18.5px;
+}
+
+.util-icons .fa-bag-shopping {
+    font-size: 19px;
+    transform: translateY(-0.5px);
+}
+
+.logo,
+.gnb a,
+.util-icons button {
+    transition: color 0.3s ease, opacity 0.2s ease;
+}
+
+/* ════════════════ 모바일 상단 헤더 ════════════════ */
+#header-mobile {
+    display: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 60px;
+    padding: 0 16px;
+    align-items: center;
+    justify-content: space-between;
+    z-index: 100;
+    background-color: transparent;
+    transition: background-color 0.3s ease, border-color 0.3s ease;
+
+    &:hover {
+        background-color: #fff;
+        border-bottom: 1px solid #e2e8f0;
+
+        .mobile-menu-btn, .mobile-logo, .mobile-icons button {
+            color: #111a30;
+        }
+    }
+}
+
+.mobile-menu-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 24px;
+    height: 24px;
+    color: #fff;
+    font-size: 20px;
+    transition: color 0.3s ease;
+}
+
+.mobile-logo {
+    font-family: 'Playfair Display', serif;
+    font-size: 24px;
+    font-weight: 700;
+    color: #fff;
+    letter-spacing: 1px;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    transition: color 0.3s ease;
+    font-style: normal;
+}
+
+.mobile-icons {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+}
+
+.mobile-icons button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 22px;
+    height: 22px;
+    color: #fff;
+    transition: color 0.3s ease;
+}
+
+.mobile-icons .fa-user {
+    font-size: 17.5px;
+}
+
+.mobile-icons .fa-bag-shopping {
+    font-size: 18px;
+    transform: translateY(-0.5px);
+}
+
+/* ════════════════ 히어로 배너 영역 ════════════════ */
+#hero {
+    width: 100%;
+    height: 500px;
+    overflow: hidden;
+    background-color: #f7dcd7;
+}
+
+#hero img {
+    width: 100%;
+    height: 100%;
+    display: block;
+    object-fit: cover;
+}
+
+#hero-desktop-img {
+    display: block;
+}
+
+#hero-mobile-img {
+    display: none !important;
+}
+
+/* ════════════════ 대메뉴 카테고리 탭 바 ════════════════ */
+#sub-nav {
+    background-color: #111a30;
+    display: flex;
+    justify-content: center;
+    gap: 54px;
+    padding: 22px 0;
+}
+
+.cat-btn {
+    font-family: 'Playfair Display', serif;
+    font-size: 15px;
+    font-weight: 700;
+    color: rgba(255, 255, 255, 0.4);
+    letter-spacing: 1px;
+    padding-bottom: 2px;
+    border-bottom: 2px solid transparent;
+    transition: color 0.2s, border-color 0.2s;
+    font-style: normal;
+}
+
+.cat-btn.active, .cat-btn:hover {
+    color: #fff;
+    border-bottom: 2px solid #fff;
+}
+
+/* ════════════════ 메인 콘텐츠 섹션 레이아웃 ════════════════ */
+#product-section {
+    max-width: 1440px;
+    margin: 0 auto;
+    padding: 50px 40px;
+    margin-top: 80px;
+}
+
+.controls-row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 1px solid #e2e8f0;
+    padding-bottom: 14px;
+    margin-bottom: 30px;
+}
+
+.item-menu {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.item-count {
+    font-family: 'Playfair Display', serif;
+    font-size: 14px;
+    font-weight: 700;
+    letter-spacing: 0.5px;
+    color: #111a30;
+    font-style: normal;
+}
+
+/* 데스크톱 세부 필터 (SUIT 서체 적용) */
+.sub-filters {
+    display: flex;
+    gap: 20px;
+}
+
+.sf-btn {
+    font-family: 'Suit', sans-serif;
+    font-size: 13px;
+    color: #767676;
+    font-weight: 500;
+    transition: color 0.2s;
+}
+
+.sf-btn.active, .sf-btn:hover {
+    color: #111a30;
+    font-weight: 700;
+}
+
+/* 정렬 셀렉트 박스 */
+.sort-wrap {
+    position: relative;
+}
+
+#sort-btn {
+    font-family: 'Suit', sans-serif;
+    width: 110px;
+    background-color: #DEE2FF;
+    border-radius: 4px;
+    padding: 8px 12px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 6px;
+    font-size: 13px;
+    color: #111a30;
+    font-weight: 500;
+    cursor: pointer;
+    transition: color 0.2s;
+}
+
+#sort-btn i {
+    font-size: 11px;
+    color: #767676;
+}
+
+#sort-dropdown {
+    font-family: 'Suit', sans-serif;
+    width: 100%;
+    display: none;
+    position: absolute;
+    top: 100%;
+    right: 0;
+    padding: 8px 12px;
+    background-color: #fff;
+    border: 1px solid #e2e8f0;
+    z-index: 10;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+}
+
+.sort-opt {
+    padding: 8px 12px;
+    font-size: 12px;
+    cursor: pointer;
+    list-style: none;
+}
+
+.sort-opt:hover {
+    background-color: #f8fafc;
+}
+
+#mobile-filters {
+    display: none;
+}
+
+/* ════════════════ 상품 카드 그리드 및 유연한 반응형 보정 ════════════════ */
+#product-grid {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    justify-content: center;
+    gap: 48px 24px;
+}
+
+.card {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    width: 100%;
+}
+
+/* 이미지 프레임 1:1 정비율 유지 공축 */
+.card-img {
+    width: 100%;
+    aspect-ratio: 1 / 1;
+    border-radius: 6px;
+    overflow: hidden;
+    background-color: #f8fafc;
+}
+
+.card-img img {
+    width: 100% !important;
+    height: 100% !important;
+    display: block;
+    object-fit: cover !important;
+    transition: transform 0.3s ease;
+}
+
+.card:hover .card-img img {
+    transform: scale(1.02);
+}
+
+/* 상품 정보 레이아웃 균일화 (SUIT 서체 세팅) */
+.card-info {
+    position: relative;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+}
+
+.card-txt {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    padding-right: 56px;
+}
+
+.card-name {
+    font-family: 'Suit', sans-serif;
+    font-size: 15px;
+    font-weight: 500;
+    color: #000;
+    line-height: 1.4;
+    margin-bottom: 4px;
+    width: 100%;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.card-desc {
+    font-family: 'Suit', sans-serif;
+    font-size: 12px;
+    color: #8e8e8e;
+    line-height: 1.4;
+    margin-bottom: 8px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.price-row {
+    margin-top: auto;
+    display: flex;
+    align-items: baseline;
+    gap: 6px;
+}
+
+.card-price {
+    font-family: 'Suit', sans-serif;
+    font-size: 16px;
+    font-weight: 700;
+    color: #000;
+}
+
+.card-price span {
+    font-size: 14px;
+    font-weight: 400;
+    margin-left: 1px;
+}
+
+.card-price-old {
+    font-family: 'Suit', sans-serif;
+    font-size: 13px;
+    color: #b5b5b5;
+    text-decoration: line-through;
+}
+
+/* 위시리스트 및 장바구니 버튼 */
+.card-actions {
+    position: absolute;
+    top: 2px;
+    right: 0;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.card-actions button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 24px;
+    height: 24px;
+}
+
+.card-actions i {
+    color: #111a30;
+    transition: transform 0.15s ease, color 0.15s ease;
+}
+
+.card-actions .fa-heart {
+    font-size: 20px;
+}
+
+.card-actions .fa-cart-plus {
+    font-size: 18.5px;
+    transform: translateY(-0.5px);
+}
+
+.wish-btn:hover i {
+    color: #e11d48;
+    transform: scale(1.08);
+}
+
+.cart-btn:hover i {
+    color: #2563eb;
+    transform: scale(1.08);
+}
+
+/* ════════════════ 하단 페이지네이션 ════════════════ */
+#pagination {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+    margin-top: 60px;
+}
+
+.pg-btn, .pg-arrow {
+    font-family: 'Suit', sans-serif;
+    width: 34px;
+    height: 34px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 13px;
+    color: #767676;
+    border: 1px solid transparent;
+}
+
+.pg-btn.active {
+    color: #111a30;
+    font-weight: 700;
+    background-color: #DEE2FF;
+    border-radius: 50px;
+}
+
+.pg-arrow {
+    border-radius: 4px;
+    font-size: 11px;
+    color: #111a30;
+}
+
+#more-btn {
+    display: none;
+}
+
+/* ════════════════ 푸터 레이아웃 ════════════════ */
+.footer {
+    background: var(--footer);
+}
+
+.footer-inner {
+    width: var(--content);
+    min-height: 500px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr 220px 160px;
+    gap: 80px;
+    padding: 80px 0 0 ;
+    font-size: 13px;
+    line-height: 1.5;
+}
+.footer-inner .footer-info{
+    display: flex;
+    flex-direction: column;
+}
+
+.footer-logo {
+    display: block;
+    margin-bottom: 40px;
+    font-size: 40px;
+    line-height: 1;
+    font-family: 'Playfair Display', Georgia, serif;
+    font-weight: 700;
+}
+
+.footer nav {
+    display: flex;
+    gap: 24px;
+    margin-bottom: 60px;
+}
+
+.footer p {
+    margin: 0 0 8px;
+    color: var(--text);
+    font-size: 13px;
+    line-height: 1.5;
+    font-weight: 600;
+}
+
+.footer .mail {
+    margin-top: 28px;
+}
+
+.copyright {
+    margin-top: 22px !important;
+    color: #727272;
+}
+
+.pipe {
+    display: inline-block;
+    width: 1px;
+    height: 11px;
+    margin: 0 14px;
+    background: #000;
+    vertical-align: -1px;
+}
+
+.cs h2,
+.sns h2 {
+    margin: 20px 0 28px;
+    font-size: 13px;
+    font-weight: 800;
+}
+
+.cs strong {
+    display: block;
+    margin-bottom: 14px;
+    font-size: 20px;
+}
+
+.sns a {
+    display: inline-flex;
+    width: 40px;
+    height: 40px;
+    align-items: center;
+    justify-content: center;
+    margin-right: 8px;
+    border: 1px solid #000;
+    border-radius: 50%;
+    transition: transform 0.2s ease, background-color 0.2s ease;
+}
+
+.sns a:hover {
+    background-color: rgba(16, 26, 51, 0.05);
+    transform: translateY(-2px);
+}
+
+.sns img {
+    width: 16px;
+    height: 16px;
+}
+
+/* 플로팅 퀵메뉴 */
+#floating {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    z-index: 99;
+}
+
+#floating button {
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    background-color: #fff;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 16px;
+    color: #111a30;
+    border: 1px solid #e2e8f0;
+}
+#floating .float-top {
+    background-color: #ffffff;
+    color: var(--navy);
+    border: 1px solid rgba(16, 26, 51, 0.15);
+}
+
+/* 2. 문의하기 버튼 (네이비 배경 + 핑크 또는 화이트 아이콘) */
+#floating .float-inquiry {
+    background-color: #101a33;
+    color: #ffffff;
+}
+
+/* ════════════════ 반응형 미디어쿼리 완전 동기화 ════════════════ */
+/* ════════════════ 반응형 미디어쿼리 완전 동기화 (검증 및 보정 완료) ════════════════ */
+@media (max-width: 1200px) {
+    /* 푸터 내부 그리드 유연하게 축소 및 간격 조정 */
+    .footer-inner {
+        width: calc(100% - 80px);
+        gap: 40px;
+    }
+
+    #product-grid {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        gap: 40px 20px;
+    }
+
+    .gnb {
+        gap: 24px;
+    }
+}
+
+@media (max-width: 768px) {
+    /* [보정] 데스크톱 헤더가 꺼질 때 모바일 헤더가 띠배너(38px) 아래에 정확히 안착하도록 위치 보정 */
+    #header-desktop {
+        display: none;
+    }
+
+    #header-mobile {
+        display: flex;
+        top: 0;
+    }
+
+    /* 배너가 닫히는 스크립트 대응용 (닫히면 모바일 헤더를 최상단 top: 0으로 밀착) */
+    #header-mobile.is-banner-closed {
+        top: 0 !important;
+    }
+
+    #hero {
+        height: 340px;
+    }
+
+    #hero-desktop-img {
+        display: none !important;
+    }
+
+    #hero-mobile-img {
+        display: block !important;
+    }
+
+    #sub-nav {
+        gap: 24px;
+        padding: 16px 0;
+    }
+
+    .cat-btn {
+        font-size: 14px;
+    }
+
+    #product-section {
+        padding: 24px 16px;
+        margin-top: 40px;
+    }
+
+    /* 상단 컨트롤러 숨김 및 모바일 필터 칩 활성화 */
+    .controls-row {
+        display: none;
+    }
+
+    #mobile-filters {
+        display: flex;
+        gap: 8px;
+        overflow-x: auto;
+        padding-bottom: 12px;
+        margin-bottom: 20px;
+        -webkit-overflow-scrolling: touch;
+    }
+
+    #mobile-filters::-webkit-scrollbar {
+        display: none;
+    }
+
+    /* 모바일 필터 칩 스타일 */
+    .pill {
+        font-family: 'Suit', sans-serif;
+        font-weight: 500;
+        font-style: normal;
+        white-space: nowrap;
+        padding: 6px 14px;
+        border-radius: 20px;
+        background-color: #f1f5f9;
+        font-size: 12px;
+        color: #64748b;
+    }
+
+    .pill.active {
+        background-color: #111a30;
+        color: #fff;
+        font-weight: 700;
+    }
+
+    /* 상품 리스트 2열 정렬 및 여백 최적화 */
+    #product-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 32px 14px;
+    }
+
+    .card-txt {
+        padding-right: 44px; /* 모바일 우측 액션 버튼 공간 확보 */
+    }
+
+    .card-name {
+        font-family: 'Suit', sans-serif;
+        font-size: 14px;
+    }
+
+    .card-desc {
+        display: none; /* 모바일에서 불필요한 서브 설명 숨김 처리 훌륭합니다 */
+    }
+
+    .card-price {
+        font-family: 'Suit', sans-serif;
+        font-size: 15px;
+    }
+
+    /* 모바일 위시/장바구니 터치 영역 겹침 방지 보정 */
+    .card-actions {
+        gap: 8px;
+        top: 0;
+    }
+
+    .card-actions button {
+        width: 24px;
+        height: 24px;
+    }
+
+    .card-actions .fa-heart {
+        font-size: 18px;
+    }
+
+    .card-actions .fa-cart-plus {
+        font-size: 17px;
+        transform: translateY(0);
+    }
+
+    #pagination {
+        display: none;
+    }
+
+    /* 모바일 MORE 버튼 */
+    #more-btn {
+        font-family: 'Suit', sans-serif;
+        font-weight: 700;
+        font-style: normal;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 8px;
+        width: 100%;
+        margin: 20px auto 40px auto;
+        height: 44px;
+        border: 1px solid #111a30;
+        font-size: 13px;
+        color: #111a30;
+    }
+
+    #more-btn i {
+        font-size: 10px;
+    }
+
+    /* 🛠️ [구조 완전 보정] 상단 클래스와 일치하도록 푸터 반응형 레이아웃 재작성 */
+    .footer-inner {
+        width: 100%;
+        display: flex;
+        flex-direction: column; /* 세로 1열 배치 */
+        gap: 40px;
+        padding: 48px 20px 60px 20px; /* 내부 여백 안전 확보 */
+        min-height: auto;
+    }
+
+    .footer-logo {
+        margin-bottom: 24px;
+        font-size: 32px;
+    }
+
+    .footer nav {
+        margin-bottom: 32px;
+        flex-wrap: wrap; /* 메뉴가 많아질 경우 모바일에서 튕기지 않고 흐르게 설정 */
+        gap: 16px;
+    }
+
+    .cs h2, .sns h2 {
+        margin-top: 0;
+        margin-bottom: 16px;
+    }
+
+    /* 플로팅 버튼 모바일 최적화 (너무 크면 화면을 가리므로 소폭 축소) */
+    #floating {
+        bottom: 20px;
+        right: 20px;
+        gap: 8px;
+    }
+
+    #floating button {
+        width: 38px;
+        height: 38px;
+        font-size: 14px;
+    }
+}
