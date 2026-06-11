@@ -6,9 +6,6 @@
   <component name="ChangeListManager">
     <list default="true" id="7a57c0cb-3e96-4b47-8184-40eef87b31c8" name="변경" comment="unove 완성 2차">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/css/index.css" beforeDir="false" afterPath="$PROJECT_DIR$/css/index.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/js/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/index.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -167,7 +164,7 @@
       <workItem from="1781073854442" duration="7029000" />
       <workItem from="1781136274870" duration="2767000" />
       <workItem from="1781139064234" duration="2196000" />
-      <workItem from="1781141568048" duration="16872000" />
+      <workItem from="1781141568048" duration="17083000" />
     </task>
     <task id="LOCAL-00001" summary="unove 드가장">
       <option name="closed" value="true" />
