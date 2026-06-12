@@ -1016,7 +1016,7 @@ img {
 
     #header-mobile {
         display: flex;
-        top: 38px; /* 상단 띠배너 높이 아래에 완벽 안착 */
+        top: 0;
         height: 56px;
         background-color: transparent;
     }
