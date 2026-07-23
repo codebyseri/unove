@@ -194,7 +194,7 @@ img {
 }
 
 /* 주 네비게이션 */
-.gnb {
+ul {
     display: flex;
     gap: 48px;
     position: absolute;
@@ -202,7 +202,7 @@ img {
     transform: translateX(-50%);
 }
 
-.gnb a {
+ul a {
     font-family: 'Playfair Display', Georgia, serif;
     font-size: 24px;
     font-weight: 700;
