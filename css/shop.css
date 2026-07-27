@@ -1,3 +1,5 @@
+@charset "UTF-8";
+
 /* ════════════════ 🌐 SUIT 한글 웹폰트 패키지 정의 ════════════════ */
 @font-face {
     font-family: 'Suit';
@@ -5,56 +7,48 @@
     font-weight: 100;
     font-display: swap;
 }
-
 @font-face {
     font-family: 'Suit';
     src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_suit@1.0/SUIT-ExtraLight.woff2') format('woff2');
     font-weight: 200;
     font-display: swap;
 }
-
 @font-face {
     font-family: 'Suit';
     src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_suit@1.0/SUIT-Light.woff2') format('woff2');
     font-weight: 300;
     font-display: swap;
 }
-
 @font-face {
     font-family: 'Suit';
     src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_suit@1.0/SUIT-Regular.woff2') format('woff2');
     font-weight: normal;
     font-display: swap;
 }
-
 @font-face {
     font-family: 'Suit';
     src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_suit@1.0/SUIT-Medium.woff2') format('woff2');
     font-weight: 500;
     font-display: swap;
 }
-
 @font-face {
     font-family: 'Suit';
     src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_suit@1.0/SUIT-SemiBold.woff2') format('woff2');
     font-weight: 600;
     font-display: swap;
 }
-
 @font-face {
     font-family: 'Suit';
     src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_suit@1.0/SUIT-Bold.woff2') format('woff2');
     font-weight: 700;
     font-display: swap;
 }
-
 @font-face {
     font-family: 'Suit';
     src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_suit@1.0/SUIT-ExtraBold.woff2') format('woff2');
     font-weight: 800;
     font-display: swap;
 }
-
 @font-face {
     font-family: 'Suit';
     src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_suit@1.0/SUIT-Heavy.woff2') format('woff2');
@@ -62,7 +56,7 @@
     font-display: swap;
 }
 
-/* ════════════════ 공통 초기화 및 폰트 세팅 ════════════════ */
+/* ════════════════ 공통 초기화 및 변수 세팅 ════════════════ */
 :root {
     --navy: #101a33;
     --pink: #f3d4d4;
@@ -79,10 +73,14 @@
 }
 
 body {
-    font-family: 'Suit', sans-serif; /* 기본 서체를 SUIT로 변경 */
-    color: #101A33;
+    font-family: 'Suit', sans-serif;
+    color: var(--navy);
     background-color: #fff;
     -webkit-font-smoothing: antialiased;
+}
+
+ul, ol, li {
+    list-style: none;
 }
 
 a {
@@ -96,6 +94,12 @@ button {
     cursor: pointer;
     padding: 0;
     font-family: inherit;
+    color: inherit;
+}
+
+img {
+    display: block;
+    max-width: 100%;
 }
 
 /* ════════════════ 띠배너 컴포넌트 ════════════════ */
@@ -139,7 +143,9 @@ button {
 /* ════════════════ 투명 헤더 절대 배치 상위 축 ════════════════ */
 .header-wrapper {
     position: relative;
+    top: 0;
     width: 100%;
+    z-index: 100;
 }
 
 /* ════════════════ 데스크톱 상단 투명 헤더 ════════════════ */
@@ -152,32 +158,44 @@ button {
     z-index: 100;
     background-color: transparent;
     transition: background-color 0.3s ease;
-
+    
     &:hover {
         background-color: #fff;
 
-        .logo {
+        .logo a {
             color: #111a30;
         }
 
-        .gnb a {
+        /* 1차 메뉴 텍스트 색상 변경 */
+        .gnb > li > a {
             color: #111a30;
 
             &:hover {
-                color: #FFAAC9;
-                opacity: 1;
+                color: var(--accent);
             }
+        }
+
+        /* 🎯 서브메뉴 노출 (좌우 -50% 축 유지하며 하단으로 자연스럽게 등장) */
+        .submenu {
+            opacity: 1;
+            visibility: visible;
+            transform: translateX(-50%) translateY(0);
         }
 
         .util-icons button {
             color: #111a30;
 
             &:hover {
-                color: #FFAAC9;
+                color: var(--accent);
                 opacity: 1;
             }
         }
     }
+}
+
+#header-desktop:hover {
+    background-color: #ffffff;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
 }
 
 .header-inner {
@@ -188,36 +206,96 @@ button {
     display: flex;
     align-items: center;
     justify-content: space-between;
+    position: relative;
 }
 
-/* 브랜드 메인 로고 (Playfair Display 정직한 볼드 고정) */
+/* 브랜드 메인 로고 */
 .logo {
     font-family: 'Playfair Display', serif;
     font-size: 40px;
     font-weight: 700;
-    color: #fff;
     letter-spacing: 1.5px;
-    cursor: pointer;
     font-style: normal;
+
+    a {
+        color: #fff;
+        text-decoration: none;
+        transition: color 0.3s ease;
+    }
 }
 
-/* 주 네비게이션 */
+/* 주 네비게이션 (GNB) */
 .gnb {
     display: flex;
+    align-items: center;
     gap: 48px;
     position: absolute;
+    top: 50%;
     left: 50%;
-    transform: translateX(-50%);
+    transform: translateX(-50%) translateY(-50%);
+    height: 100%;
+    margin: 0;
+    padding: 0;
 }
 
-.gnb a {
+.gnb > li {
+    position: relative;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.gnb > li > a {
     font-family: 'Playfair Display', serif;
     font-size: 24px;
     font-weight: 700;
     color: #fff;
     letter-spacing: 1px;
-    opacity: 1;
     font-style: normal;
+    text-decoration: none;
+    display: block;
+    transition: color 0.3s ease;
+}
+
+/* 🎯 서브메뉴 드롭다운 (정중앙 정렬 완벽 반영) */
+.submenu {
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    
+    margin: 0;
+    padding: 12px 0;
+    min-width: 130px;
+    text-align: center;
+    background-color: #fff;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.3s ease;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.06);
+    border-radius: 0 0 8px 8px;
+}
+
+.submenu li {
+    padding: 4px 0;
+}
+
+.submenu li a {
+    font-family: 'Noto Sans KR', sans-serif;
+    font-size: 14px;
+    font-weight: 500;
+    color: #666;
+    text-decoration: none;
+    white-space: nowrap;
+    display: block;
+    padding: 6px 16px;
+    transition: color 0.2s ease, background-color 0.2s ease;
+
+    &:hover {
+        color: var(--navy);
+        font-weight: 700;
+    }
 }
 
 /* 우측 유틸리티 영역 */
@@ -240,6 +318,10 @@ button {
     width: 24px;
     height: 24px;
     color: #fff;
+    background: none;
+    border: none;
+    cursor: pointer;
+    transition: color 0.3s ease, opacity 0.2s ease;
 }
 
 .util-icons .fa-magnifying-glass {
@@ -255,35 +337,26 @@ button {
     transform: translateY(-0.5px);
 }
 
-.logo,
-.gnb a,
-.util-icons button {
-    transition: color 0.3s ease, opacity 0.2s ease;
-}
-
 /* ════════════════ 모바일 상단 헤더 ════════════════ */
 #header-mobile {
     display: none;
-    position: absolute;
-    top: 0;
-    left: 0;
+    position: relative;
     width: 100%;
-    height: 60px;
-    padding: 0 16px;
+    height: 56px;
+    padding: 0 20px;
     align-items: center;
     justify-content: space-between;
     z-index: 100;
-    background-color: transparent;
-    transition: background-color 0.3s ease, border-color 0.3s ease;
+    background-color: #ffffff;
+    color: var(--navy);
+    border-bottom: 1px solid rgba(16, 26, 51, 0.08);
+}
 
-    &:hover {
-        background-color: #fff;
-        border-bottom: 1px solid #e2e8f0;
-
-        .mobile-menu-btn, .mobile-logo, .mobile-icons button {
-            color: #111a30;
-        }
-    }
+#header-mobile:hover,
+#header-mobile.is-scrolled {
+    background-color: rgba(255, 255, 255, 0.94);
+    color: var(--navy);
+    border-bottom: 1px solid rgba(16, 26, 51, 0.08);
 }
 
 .mobile-menu-btn {
@@ -292,22 +365,21 @@ button {
     justify-content: center;
     width: 24px;
     height: 24px;
-    color: #fff;
+    color: inherit;
     font-size: 20px;
-    transition: color 0.3s ease;
 }
 
 .mobile-logo {
-    font-family: 'Playfair Display', serif;
+    font-family: 'Playfair Display', Georgia, serif;
     font-size: 24px;
     font-weight: 700;
-    color: #fff;
+    color: inherit;
     letter-spacing: 1px;
     position: absolute;
     left: 50%;
     transform: translateX(-50%);
-    transition: color 0.3s ease;
-    font-style: normal;
+    text-decoration: none;
+    display: inline-block;
 }
 
 .mobile-icons {
@@ -322,8 +394,7 @@ button {
     justify-content: center;
     width: 22px;
     height: 22px;
-    color: #fff;
-    transition: color 0.3s ease;
+    color: inherit;
 }
 
 .mobile-icons .fa-user {
@@ -332,13 +403,136 @@ button {
 
 .mobile-icons .fa-bag-shopping {
     font-size: 18px;
-    transform: translateY(-0.5px);
+}
+
+/* ════════════════ 모바일 메뉴 드로어 & 오버레이 ════════════════ */
+.mobile-menu-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 998;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.3s ease;
+
+    &.active {
+        opacity: 1;
+        visibility: visible;
+    }
+}
+
+.mobile-menu-drawer {
+    position: fixed;
+    top: 0;
+    left: -100%;
+    width: 80%;
+    max-width: 320px;
+    height: 100vh;
+    background-color: #fff;
+    z-index: 999;
+    transition: left 0.35s cubic-bezier(0.25, 1, 0.5, 1);
+    display: flex;
+    flex-direction: column;
+    box-shadow: 4px 0 16px rgba(0, 0, 0, 0.1);
+
+    &.active {
+        left: 0;
+    }
+}
+
+.drawer-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px;
+    border-bottom: 1px solid #eee;
+
+    .drawer-logo {
+        font-family: 'Playfair Display', serif;
+        font-size: 24px;
+        font-weight: 700;
+        color: var(--navy);
+    }
+
+    .drawer-close-btn {
+        background: none;
+        border: none;
+        font-size: 24px;
+        color: var(--navy);
+        cursor: pointer;
+    }
+}
+
+.mobile-gnb {
+    margin: 0;
+    padding: 10px 0;
+    overflow-y: auto;
+
+    li {
+        border-bottom: 1px solid #f9f9f9;
+
+        .menu-title {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 16px 20px;
+
+            a {
+                font-family: 'Playfair Display', serif;
+                font-size: 18px;
+                font-weight: 700;
+                color: var(--navy);
+                text-decoration: none;
+            }
+
+            .toggle-sub-btn {
+                background: none;
+                border: none;
+                color: #888;
+                font-size: 14px;
+                padding: 4px 8px;
+                cursor: pointer;
+                transition: transform 0.3s ease;
+            }
+        }
+
+        &.open .toggle-sub-btn {
+            transform: rotate(180deg);
+        }
+    }
+}
+
+.mobile-submenu {
+    background-color: #fcfcfc;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease;
+
+    li a {
+        display: block;
+        padding: 12px 20px 12px 32px;
+        font-family: 'Noto Sans KR', sans-serif;
+        font-size: 14px;
+        color: #666;
+        text-decoration: none;
+
+        &:hover {
+            color: var(--accent);
+        }
+    }
+}
+
+.mobile-gnb li.open .mobile-submenu {
+    max-height: 300px;
 }
 
 /* ════════════════ 히어로 배너 영역 ════════════════ */
 #hero {
     width: 100%;
-    height: 500px;
+    height: 550px;
     overflow: hidden;
     background-color: #f7dcd7;
 }
@@ -376,12 +570,11 @@ button {
     padding-bottom: 2px;
     border-bottom: 2px solid transparent;
     transition: color 0.2s, border-color 0.2s;
-    font-style: normal;
 }
 
 .cat-btn.active, .cat-btn:hover {
-    color: #fff;
-    border-bottom: 2px solid #fff;
+    color: #ffffff;
+    border-bottom: 2px solid #ffffff;
 }
 
 /* ════════════════ 메인 콘텐츠 섹션 레이아웃 ════════════════ */
@@ -389,7 +582,6 @@ button {
     max-width: 1440px;
     margin: 0 auto;
     padding: 50px 40px;
-    margin-top: 80px;
 }
 
 .controls-row {
@@ -413,10 +605,8 @@ button {
     font-weight: 700;
     letter-spacing: 0.5px;
     color: #111a30;
-    font-style: normal;
 }
 
-/* 데스크톱 세부 필터 (SUIT 서체 적용) */
 .sub-filters {
     display: flex;
     gap: 20px;
@@ -435,7 +625,6 @@ button {
     font-weight: 700;
 }
 
-/* 정렬 셀렉트 박스 */
 .sort-wrap {
     position: relative;
 }
@@ -453,8 +642,6 @@ button {
     font-size: 13px;
     color: #111a30;
     font-weight: 500;
-    cursor: pointer;
-    transition: color 0.2s;
 }
 
 #sort-btn i {
@@ -470,7 +657,7 @@ button {
     top: 100%;
     right: 0;
     padding: 8px 12px;
-    background-color: #fff;
+    background-color: #ffffff;
     border: 1px solid #e2e8f0;
     z-index: 10;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
@@ -480,7 +667,6 @@ button {
     padding: 8px 12px;
     font-size: 12px;
     cursor: pointer;
-    list-style: none;
 }
 
 .sort-opt:hover {
@@ -491,7 +677,7 @@ button {
     display: none;
 }
 
-/* ════════════════ 상품 카드 그리드 및 유연한 반응형 보정 ════════════════ */
+/* ════════════════ 상품 카드 그리드 ════════════════ */
 #product-grid {
     display: grid;
     grid-template-columns: repeat(4, minmax(0, 1fr));
@@ -506,7 +692,6 @@ button {
     width: 100%;
 }
 
-/* 이미지 프레임 1:1 정비율 유지 공축 */
 .card-img {
     width: 100%;
     aspect-ratio: 1 / 1;
@@ -527,7 +712,6 @@ button {
     transform: scale(1.02);
 }
 
-/* 상품 정보 레이아웃 균일화 (SUIT 서체 세팅) */
 .card-info {
     position: relative;
     width: 100%;
@@ -547,10 +731,9 @@ button {
     font-family: 'Suit', sans-serif;
     font-size: 15px;
     font-weight: 500;
-    color: #000;
+    color: #000000;
     line-height: 1.4;
     margin-bottom: 4px;
-    width: 100%;
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
@@ -578,13 +761,7 @@ button {
     font-family: 'Suit', sans-serif;
     font-size: 16px;
     font-weight: 700;
-    color: #000;
-}
-
-.card-price span {
-    font-size: 14px;
-    font-weight: 400;
-    margin-left: 1px;
+    color: #000000;
 }
 
 .card-price-old {
@@ -594,7 +771,6 @@ button {
     text-decoration: line-through;
 }
 
-/* 위시리스트 및 장바구니 버튼 */
 .card-actions {
     position: absolute;
     top: 2px;
@@ -615,15 +791,6 @@ button {
 .card-actions i {
     color: #111a30;
     transition: transform 0.15s ease, color 0.15s ease;
-}
-
-.card-actions .fa-heart {
-    font-size: 20px;
-}
-
-.card-actions .fa-cart-plus {
-    font-size: 18.5px;
-    transform: translateY(-0.5px);
 }
 
 .wish-btn:hover i {
@@ -664,12 +831,6 @@ button {
     border-radius: 50px;
 }
 
-.pg-arrow {
-    border-radius: 4px;
-    font-size: 11px;
-    color: #111a30;
-}
-
 #more-btn {
     display: none;
 }
@@ -677,54 +838,32 @@ button {
 /* ════════════════ 푸터 레이아웃 ════════════════ */
 .footer {
     background: var(--footer);
+    margin-top: 100px;
 }
 
 .footer-inner {
     width: var(--content);
-    min-height: 500px;
     margin: 0 auto;
     display: grid;
     grid-template-columns: 1fr 220px 160px;
     gap: 80px;
-    padding: 80px 0 0 ;
+    padding: 80px 0;
     font-size: 13px;
     line-height: 1.5;
-}
-.footer-inner .footer-info{
-    display: flex;
-    flex-direction: column;
 }
 
 .footer-logo {
     display: block;
     margin-bottom: 40px;
     font-size: 40px;
-    line-height: 1;
-    font-family: 'Playfair Display', Georgia, serif;
+    font-family: 'Playfair Display', serif;
     font-weight: 700;
 }
 
 .footer nav {
     display: flex;
     gap: 24px;
-    margin-bottom: 60px;
-}
-
-.footer p {
-    margin: 0 0 8px;
-    color: var(--text);
-    font-size: 13px;
-    line-height: 1.5;
-    font-weight: 600;
-}
-
-.footer .mail {
-    margin-top: 28px;
-}
-
-.copyright {
-    margin-top: 22px !important;
-    color: #727272;
+    margin-bottom: 40px;
 }
 
 .pipe {
@@ -733,13 +872,11 @@ button {
     height: 11px;
     margin: 0 14px;
     background: #000;
-    vertical-align: -1px;
 }
 
-.cs h2,
-.sns h2 {
-    margin: 20px 0 28px;
-    font-size: 13px;
+.cs h2, .sns h2 {
+    margin: 0 0 20px;
+    font-size: 14px;
     font-weight: 800;
 }
 
@@ -758,17 +895,6 @@ button {
     margin-right: 8px;
     border: 1px solid #000;
     border-radius: 50%;
-    transition: transform 0.2s ease, background-color 0.2s ease;
-}
-
-.sns a:hover {
-    background-color: rgba(16, 26, 51, 0.05);
-    transform: translateY(-2px);
-}
-
-.sns img {
-    width: 16px;
-    height: 16px;
 }
 
 /* 플로팅 퀵메뉴 */
@@ -786,7 +912,7 @@ button {
     width: 44px;
     height: 44px;
     border-radius: 50%;
-    background-color: #fff;
+    background-color: #ffffff;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
     display: flex;
     align-items: center;
@@ -795,55 +921,39 @@ button {
     color: #111a30;
     border: 1px solid #e2e8f0;
 }
-#floating .float-top {
-    background-color: #ffffff;
-    color: var(--navy);
-    border: 1px solid rgba(16, 26, 51, 0.15);
-}
 
-/* 2. 문의하기 버튼 (네이비 배경 + 핑크 또는 화이트 아이콘) */
 #floating .float-inquiry {
     background-color: #101a33;
     color: #ffffff;
 }
 
-/* ════════════════ 반응형 미디어쿼리 완전 동기화 ════════════════ */
-/* ════════════════ 반응형 미디어쿼리 완전 동기화 (검증 및 보정 완료) ════════════════ */
+/* ════════════════ 반응형 미디어쿼리 ════════════════ */
 @media (max-width: 1200px) {
-    /* 푸터 내부 그리드 유연하게 축소 및 간격 조정 */
     .footer-inner {
         width: calc(100% - 80px);
         gap: 40px;
     }
-
     #product-grid {
         grid-template-columns: repeat(3, minmax(0, 1fr));
         gap: 40px 20px;
     }
-
     .gnb {
         gap: 24px;
     }
 }
 
+/* 🎯 모바일 반응형 완벽 보정 🎯 */
 @media (max-width: 768px) {
-    /* [보정] 데스크톱 헤더가 꺼질 때 모바일 헤더가 띠배너(38px) 아래에 정확히 안착하도록 위치 보정 */
     #header-desktop {
         display: none;
     }
 
     #header-mobile {
         display: flex;
-        top: 0;
-    }
-
-    /* 배너가 닫히는 스크립트 대응용 (닫히면 모바일 헤더를 최상단 top: 0으로 밀착) */
-    #header-mobile.is-banner-closed {
-        top: 0 !important;
     }
 
     #hero {
-        height: 340px;
+        height: 360px;
     }
 
     #hero-desktop-img {
@@ -855,7 +965,7 @@ button {
     }
 
     #sub-nav {
-        gap: 24px;
+        gap: 20px;
         padding: 16px 0;
     }
 
@@ -865,10 +975,8 @@ button {
 
     #product-section {
         padding: 24px 16px;
-        margin-top: 40px;
     }
 
-    /* 상단 컨트롤러 숨김 및 모바일 필터 칩 활성화 */
     .controls-row {
         display: none;
     }
@@ -882,15 +990,9 @@ button {
         -webkit-overflow-scrolling: touch;
     }
 
-    #mobile-filters::-webkit-scrollbar {
-        display: none;
-    }
-
-    /* 모바일 필터 칩 스타일 */
     .pill {
         font-family: 'Suit', sans-serif;
         font-weight: 500;
-        font-style: normal;
         white-space: nowrap;
         padding: 6px 14px;
         border-radius: 20px;
@@ -901,63 +1003,96 @@ button {
 
     .pill.active {
         background-color: #111a30;
-        color: #fff;
+        color: #ffffff;
         font-weight: 700;
     }
 
-    /* 상품 리스트 2열 정렬 및 여백 최적화 */
     #product-grid {
         grid-template-columns: repeat(2, minmax(0, 1fr));
-        gap: 32px 14px;
+        gap: 28px 12px;
     }
 
+    .card-info {
+        display: flex;
+        flex-direction: column;
+        position: relative;
+        width: 100%;
+    }
+
+    /* 💡 하트 아이콘 하나만 남으므로 오른쪽 여백을 28px로 줄여 상품명 표기 공간 최대화 */
     .card-txt {
-        padding-right: 44px; /* 모바일 우측 액션 버튼 공간 확보 */
+        width: 100%;
+        padding-right: 28px;
+        box-sizing: border-box;
     }
 
     .card-name {
-        font-family: 'Suit', sans-serif;
-        font-size: 14px;
+        font-size: 13px;
+        font-weight: 600;
+        line-height: 1.35;
+        color: #000;
+        margin-bottom: 2px;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
     }
 
     .card-desc {
-        display: none; /* 모바일에서 불필요한 서브 설명 숨김 처리 훌륭합니다 */
+        display: none;
+    }
+
+    .price-row {
+        margin-top: 6px;
+        display: flex;
+        align-items: baseline;
+        gap: 4px;
     }
 
     .card-price {
-        font-family: 'Suit', sans-serif;
-        font-size: 15px;
+        font-size: 14px;
+        font-weight: 700;
     }
 
-    /* 모바일 위시/장바구니 터치 영역 겹침 방지 보정 */
+    .card-price-old {
+        font-size: 11px;
+    }
+
     .card-actions {
-        gap: 8px;
+        position: absolute;
         top: 0;
+        right: 0;
+        display: flex;
+        align-items: center;
+    }
+
+    /* 🚫 🛒 모바일 상품 리스트 섹션에서 장바구니 버튼 숨김 처리 */
+    .card-actions .cart-btn {
+        display: none !important;
+    }
+
+    .card-name .brand-name {
+        display: none;
     }
 
     .card-actions button {
-        width: 24px;
-        height: 24px;
+        width: 20px;
+        height: 20px;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
     }
 
-    .card-actions .fa-heart {
-        font-size: 18px;
-    }
-
-    .card-actions .fa-cart-plus {
-        font-size: 17px;
-        transform: translateY(0);
+    .card-actions i {
+        font-size: 15px;
     }
 
     #pagination {
         display: none;
     }
 
-    /* 모바일 MORE 버튼 */
     #more-btn {
         font-family: 'Suit', sans-serif;
         font-weight: 700;
-        font-style: normal;
         display: flex;
         align-items: center;
         justify-content: center;
@@ -970,41 +1105,17 @@ button {
         color: #111a30;
     }
 
-    #more-btn i {
-        font-size: 10px;
-    }
-
-    /* 🛠️ [구조 완전 보정] 상단 클래스와 일치하도록 푸터 반응형 레이아웃 재작성 */
     .footer-inner {
         width: 100%;
         display: flex;
-        flex-direction: column; /* 세로 1열 배치 */
+        flex-direction: column;
         gap: 40px;
-        padding: 48px 20px 60px 20px; /* 내부 여백 안전 확보 */
-        min-height: auto;
+        padding: 48px 20px;
     }
 
-    .footer-logo {
-        margin-bottom: 24px;
-        font-size: 32px;
-    }
-
-    .footer nav {
-        margin-bottom: 32px;
-        flex-wrap: wrap; /* 메뉴가 많아질 경우 모바일에서 튕기지 않고 흐르게 설정 */
-        gap: 16px;
-    }
-
-    .cs h2, .sns h2 {
-        margin-top: 0;
-        margin-bottom: 16px;
-    }
-
-    /* 플로팅 버튼 모바일 최적화 (너무 크면 화면을 가리므로 소폭 축소) */
     #floating {
         bottom: 20px;
         right: 20px;
-        gap: 8px;
     }
 
     #floating button {

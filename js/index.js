@@ -210,3 +210,49 @@ document.addEventListener('DOMContentLoaded', () => {
 		});
 	});
 });
+
+document.addEventListener('DOMContentLoaded', () => {
+    // 1. 요소 선택
+    const mobileMenuBtn = document.querySelector('.mobile-menu-btn');
+    const drawerCloseBtn = document.querySelector('.drawer-close-btn');
+    const menuDrawer = document.querySelector('.mobile-menu-drawer');
+    const menuOverlay = document.querySelector('.mobile-menu-overlay');
+    const toggleSubBtns = document.querySelectorAll('.toggle-sub-btn');
+
+    // 2. 모바일 메뉴 열기 함수
+    const openMenu = () => {
+        menuDrawer.classList.add('active');
+        menuOverlay.classList.add('active');
+        document.body.style.overflow = 'hidden'; // 메뉴 열렸을 때 뒤쪽 스크롤 방지
+    };
+
+    // 3. 모바일 메뉴 닫기 함수
+    const closeMenu = () => {
+        menuDrawer.classList.remove('active');
+        menuOverlay.classList.remove('active');
+        document.body.style.overflow = ''; // 스크롤 다시 복구
+    };
+
+    // 4. 이벤트 리스너 등록 (열기 / 닫기)
+    if (mobileMenuBtn) mobileMenuBtn.addEventListener('click', openMenu);
+    if (drawerCloseBtn) drawerCloseBtn.addEventListener('click', closeMenu);
+    if (menuOverlay) menuOverlay.addEventListener('click', closeMenu);
+
+    // 5. 모바일 서브메뉴 아코디언 토글 (하위 메뉴 열기/닫기)
+    toggleSubBtns.forEach(btn => {
+        btn.addEventListener('click', (e) => {
+            e.stopPropagation(); // 부모 링크 이동 이벤트 방지
+            const parentLi = btn.closest('li');
+            
+            if (parentLi) {
+                // 다른 메뉴를 닫고 싶다면 아래 주석을 해제하세요.
+                /*
+                document.querySelectorAll('.mobile-gnb > li').forEach(item => {
+                    if (item !== parentLi) item.classList.remove('open');
+                });
+                */
+                parentLi.classList.toggle('open');
+            }
+        });
+    });
+});
