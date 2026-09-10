@@ -1,353 +1,497 @@
 <!doctype html>
 <html lang="ko">
-<head>
-    <meta charset="UTF-8"/>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>UNOVE</title>
-    <link rel="stylesheet" href="./css/index.css"/>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"/>
+    <link rel="stylesheet" href="./css/index.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
     <script src="./js/index.js" defer></script>
-</head>
-<body>
+  </head>
+  <body>
     <!-- 상단 띠배너 -->
     <div id="top-banner">
-        <p>신규 회원 가입하고 10% 할인 받기</p>
-        <button id="banner-close" aria-label="배너 닫기">
-            <i class="fa-solid fa-xmark"></i>
-        </button>
+      <p>신규 회원 가입하고 10% 할인 받기</p>
+      <button id="banner-close" aria-label="배너 닫기">
+        <i class="fa-solid fa-xmark"></i>
+      </button>
     </div>
-    
+
     <!-- 🎯 모바일 메뉴 드로어 & 오버레이 (fixed 레이어는 body 직계 자식으로 배치) -->
     <div class="mobile-menu-overlay" id="mobileMenuOverlay"></div>
 
-    <nav class="mobile-menu-drawer" id="mobileMenuDrawer" aria-label="모바일 메뉴">
-        <div class="drawer-header">
-            <span class="drawer-logo">UNOVE</span>
-            <button class="drawer-close-btn" id="drawerCloseBtn" aria-label="닫기">
-                <i class="fa-solid fa-xmark"></i>
-            </button>
-        </div>
+    <nav
+      class="mobile-menu-drawer"
+      id="mobileMenuDrawer"
+      aria-label="모바일 메뉴"
+    >
+      <div class="drawer-header">
+        <span class="drawer-logo">UNOVE</span>
+        <button class="drawer-close-btn" id="drawerCloseBtn" aria-label="닫기">
+          <i class="fa-solid fa-xmark"></i>
+        </button>
+      </div>
 
-        <ul class="mobile-gnb">
-            <li class="has-sub open">
-                <div class="menu-title">
-                    <a href="./html/shop.html">SHOP</a>
-                    <button class="toggle-sub-btn" aria-label="SHOP 서브메뉴 열기"><i class="fa-solid fa-chevron-down"></i></button>
-                </div>
-                <ul class="mobile-submenu">
-                    <li><a href="#">ALL</a></li>
-                    <li><a href="#">BEST</a></li>
-                    <li><a href="#">NEW</a></li>
-                    <li><a href="#">SET/GIFT</a></li>
-                </ul>
-            </li>
-            <li>
-                <div class="menu-title">
-                    <a href="#">EVENT</a>
-                </div>
-            </li>
-            <li class="has-sub">
-                <div class="menu-title">
-                    <a href="#">COMMUNITY</a>
-                    <button class="toggle-sub-btn" aria-label="COMMUNITY 서브메뉴 열기"><i class="fa-solid fa-chevron-down"></i></button>
-                </div>
-                <ul class="mobile-submenu">
-                    <li><a href="#">회원혜택</a></li>
-                    <li><a href="#">문의하기</a></li>
-                    <li><a href="#">공지사항</a></li>
-                    <li><a href="#">FAQ</a></li>
-                </ul>
-            </li>
-            <li>
-                <div class="menu-title">
-                    <a href="#">STORY</a>
-                </div>
-            </li>
-        </ul>
+      <ul class="mobile-gnb">
+        <li class="has-sub open">
+          <div class="menu-title">
+            <a href="./html/shop.html">SHOP</a>
+            <button class="toggle-sub-btn" aria-label="SHOP 서브메뉴 열기">
+              <i class="fa-solid fa-chevron-down"></i>
+            </button>
+          </div>
+          <ul class="mobile-submenu">
+            <li><a href="#">ALL</a></li>
+            <li><a href="#">BEST</a></li>
+            <li><a href="#">NEW</a></li>
+            <li><a href="#">SET/GIFT</a></li>
+          </ul>
+        </li>
+        <li>
+          <div class="menu-title">
+            <a href="#">EVENT</a>
+          </div>
+        </li>
+        <li class="has-sub">
+          <div class="menu-title">
+            <a href="#">COMMUNITY</a>
+            <button class="toggle-sub-btn" aria-label="COMMUNITY 서브메뉴 열기">
+              <i class="fa-solid fa-chevron-down"></i>
+            </button>
+          </div>
+          <ul class="mobile-submenu">
+            <li><a href="#">회원혜택</a></li>
+            <li><a href="#">문의하기</a></li>
+            <li><a href="#">공지사항</a></li>
+            <li><a href="#">FAQ</a></li>
+          </ul>
+        </li>
+        <li>
+          <div class="menu-title">
+            <a href="#">STORY</a>
+          </div>
+        </li>
+      </ul>
     </nav>
 
     <!-- 헤더 영역 -->
     <div class="header-wrapper">
-        <!-- 데스크톱 헤더 -->
-        <header id="header-desktop">
-            <div class="header-inner">
-                <span class="logo">
-                    <!-- 🎯 경로 수정: ../index.html -> ./index.html -->
-                    <a href="./index.html">
-                        UNOVE
-                    </a>
-                </span>
-                <nav aria-label="데스크톱 메인 메뉴">
-                    <ul class="gnb">
-                        <li>
-                            <a href="./html/shop.html">SHOP</a>
-                            <ul class="submenu">
-                                <li><a href="./html/shop.html">ALL</a></li>
-                                <li><a href="#">BEST</a></li>
-                                <li><a href="#">NEW</a></li>
-                                <li><a href="#">SET/GIFT</a></li>
-                            </ul>
-                        </li>
-                        <li>
-                            <a href="#">EVENT</a>
-                        </li>
-                        <li>
-                            <a href="#">COMMUNITY</a>
-                            <ul class="submenu">
-                                <li><a href="#">회원혜택</a></li>
-                                <li><a href="#">문의하기</a></li>
-                                <li><a href="#">공지사항</a></li>
-                                <li><a href="#">FAQ</a></li>
-                            </ul>
-                        </li>
-                        <li>
-                            <a href="#">STORY</a>
-                        </li>
-                    </ul>
-                </nav>
-                <div class="header-right">
-                    <div class="util-icons">
-                        <button aria-label="검색">
-                            <i class="fa-solid fa-magnifying-glass"></i>
-                        </button>
-                        <button aria-label="마이페이지">
-                            <i class="fa-regular fa-user"></i>
-                        </button>
-                        <button aria-label="장바구니">
-                            <i class="fa-solid fa-bag-shopping"></i>
-                        </button>
-                    </div>
-                </div>
+      <!-- 데스크톱 헤더 -->
+      <header id="header-desktop">
+        <div class="header-inner">
+          <span class="logo">
+            <!-- 🎯 경로 수정: ../index.html -> ./index.html -->
+            <a href="./index.html"> UNOVE </a>
+          </span>
+          <nav class="desktop-nav" aria-label="데스크톱 메인 메뉴">
+            <ul class="gnb">
+              <li>
+                <a href="./html/shop.html">SHOP</a>
+              </li>
+              <li>
+                <a href="#">EVENT</a>
+              </li>
+              <li>
+                <a href="#">COMMUNITY</a>
+              </li>
+              <li>
+                <a href="#">STORY</a>
+              </li>
+            </ul>
+          </nav>
+          <div class="header-right">
+            <div class="util-icons">
+              <button aria-label="검색">
+                <i class="fa-solid fa-magnifying-glass"></i>
+              </button>
+              <button aria-label="마이페이지">
+                <i class="fa-regular fa-user"></i>
+              </button>
+              <button aria-label="장바구니">
+                <i class="fa-solid fa-bag-shopping"></i>
+              </button>
             </div>
-        </header>
-        
-        <!-- 모바일 헤더 -->
-        <header id="header-mobile">
-            <button class="mobile-menu-btn" aria-label="메뉴 열기">
-                <i class="fa-solid fa-bars"></i>
-            </button>
-            <span class="mobile-logo">UNOVE</span>
-            <div class="mobile-icons">
-                <button aria-label="마이페이지">
-                    <i class="fa-regular fa-user"></i>
-                </button>
-                <button aria-label="장바구니">
-                    <i class="fa-solid fa-bag-shopping"></i>
-                </button>
+          </div>
+        </div>
+        <div class="mega-menu" aria-label="전체 하위 메뉴">
+          <div class="mega-menu-inner">
+            <div class="mega-menu-column">
+              <ul>
+                <li><a href="./html/shop.html">ALL</a></li>
+                <li><a href="#">BEST</a></li>
+                <li><a href="#">NEW</a></li>
+                <li><a href="#">SET/GIFT</a></li>
+              </ul>
             </div>
-        </header>
+            <div class="mega-menu-column" aria-hidden="true"></div>
+            <div class="mega-menu-column">
+              <ul>
+                <li><a href="#">회원혜택</a></li>
+                <li><a href="#">문의하기</a></li>
+                <li><a href="#">공지사항</a></li>
+                <li><a href="#">FAQ</a></li>
+              </ul>
+            </div>
+            <div class="mega-menu-column" aria-hidden="true"></div>
+          </div>
+        </div>
+      </header>
+
+      <!-- 모바일 헤더 -->
+      <header id="header-mobile">
+        <button class="mobile-menu-btn" aria-label="메뉴 열기">
+          <i class="fa-solid fa-bars"></i>
+        </button>
+        <span class="mobile-logo">UNOVE</span>
+        <div class="mobile-icons">
+          <button aria-label="마이페이지">
+            <i class="fa-regular fa-user"></i>
+          </button>
+          <button aria-label="장바구니">
+            <i class="fa-solid fa-bag-shopping"></i>
+          </button>
+        </div>
+      </header>
     </div>
-    
+
     <!-- 메인 컨텐츠 영역 -->
     <main>
-        <!-- 히어로 슬라이더 -->
-        <div id="hero">
-            <div class="slider-container">
-                <div class="slide is-active">
-                    <picture>
-                        <source media="(max-width: 640px)" srcset="./images/main/hero-moblie-01.png"/>
-                        <source media="(max-width: 1280px)" srcset="./images/main/hero-tablet-01.png"/>
-                        <img src="./images/main/hero-desktop-01.png" id="hero-desktop-img" alt="어노브 메인 화보 1"/>
-                    </picture>
-                </div>
-                <div class="slide">
-                    <picture>
-                        <source media="(max-width: 640px)" srcset="./images/main/hero-moblie-02.png"/>
-                        <source media="(max-width: 1280px)" srcset="./images/main/hero-tabelt-02.png"/>
-                        <img src="./images/main/hero-desktop-02.png" alt="어노브 메인 화보 2"/>
-                    </picture>
-                </div>
-                <div class="slide">
-                    <picture>
-                        <source media="(max-width: 640px)" srcset="./images/main/hero-moblie-03.png"/>
-                        <source media="(max-width: 1280px)" srcset="./images/main/hero-tabelt-03.png"/>
-                        <img src="./images/main/hero-desktop-03.png" alt="어노브 메인 화보 3"/>
-                    </picture>
-                </div>
-                <div class="slide">
-                    <picture>
-                        <source media="(max-width: 640px)" srcset="./images/main/hero-moblie-04.png"/>
-                        <source media="(max-width: 1280px)" srcset="./images/main/hero-tabelt-04.png"/>
-                        <img src="./images/main/hero-desktop-04.png" alt="어노브 메인 화보 4"/>
-                    </picture>
-                </div>
-                <div class="slide">
-                    <picture>
-                        <source media="(max-width: 640px)" srcset="./images/main/hero-moblie-05.png"/>
-                        <source media="(max-width: 1280px)" srcset="./images/main/hero-tabelt-05.png"/>
-                        <img src="./images/main/hero-desktop-05.png" alt="어노브 메인 화보 5"/>
-                    </picture>
-                </div>
-                
-                <div class="slider-indicator" aria-hidden="true">
-                    <span class="current-slide">01</span>
-                    <i><b></b></i>
-                    <span class="desktop-last">05</span>
-                    <span class="tablet-last">05</span>
-                </div>
-            </div>
-        </div>
+      <!-- 히어로 슬라이더 -->
+      <div id="hero">
+        <div class="slider-container">
+          <div class="slide is-active">
+            <picture>
+              <source
+                media="(max-width: 640px)"
+                srcset="./images/main/hero-moblie-01.png"
+              />
+              <source
+                media="(max-width: 1280px)"
+                srcset="./images/main/hero-tablet-01.png"
+              />
+              <img
+                src="./images/main/hero-desktop-01.png"
+                id="hero-desktop-img"
+                alt="어노브 메인 화보 1"
+              />
+            </picture>
+          </div>
+          <div class="slide">
+            <picture>
+              <source
+                media="(max-width: 640px)"
+                srcset="./images/main/hero-moblie-02.png"
+              />
+              <source
+                media="(max-width: 1280px)"
+                srcset="./images/main/hero-tabelt-02.png"
+              />
+              <img
+                src="./images/main/hero-desktop-02.png"
+                alt="어노브 메인 화보 2"
+              />
+            </picture>
+          </div>
+          <div class="slide">
+            <picture>
+              <source
+                media="(max-width: 640px)"
+                srcset="./images/main/hero-moblie-03.png"
+              />
+              <source
+                media="(max-width: 1280px)"
+                srcset="./images/main/hero-tabelt-03.png"
+              />
+              <img
+                src="./images/main/hero-desktop-03.png"
+                alt="어노브 메인 화보 3"
+              />
+            </picture>
+          </div>
+          <div class="slide">
+            <picture>
+              <source
+                media="(max-width: 640px)"
+                srcset="./images/main/hero-moblie-04.png"
+              />
+              <source
+                media="(max-width: 1280px)"
+                srcset="./images/main/hero-tabelt-04.png"
+              />
+              <img
+                src="./images/main/hero-desktop-04.png"
+                alt="어노브 메인 화보 4"
+              />
+            </picture>
+          </div>
+          <div class="slide">
+            <picture>
+              <source
+                media="(max-width: 640px)"
+                srcset="./images/main/hero-moblie-05.png"
+              />
+              <source
+                media="(max-width: 1280px)"
+                srcset="./images/main/hero-tabelt-05.png"
+              />
+              <img
+                src="./images/main/hero-desktop-05.png"
+                alt="어노브 메인 화보 5"
+              />
+            </picture>
+          </div>
 
-        <!-- BEST 제품 섹션 -->
-        <section class="best" id="shop">
-            <h2>BEST</h2>
-            <div class="product-grid">
-                <article class="product-card">
-                    <div class="product-image">
-                        <img src="./images/main/best-perfume-desktop.png" alt="어노브 향수 오 드 퍼퓸"/>
-                        <div class="quick-actions">
-                            <button type="button" class="like-button" aria-label="찜하기"></button>
-                            <button type="button" class="bag-button" aria-label="장바구니 담기"></button>
-                        </div>
-                    </div>
-                    <h3>어노브 향수 오 드 퍼퓸+미니듀오 증정</h3>
-                    <p class="desc">포근하게 스며들어 오랫동안 살결에 남는 나만의 분위기. 당신만의 분위기와 우아함을 더해줄 어노브 오 드 퍼퓸</p>
-                    <strong>49,000원</strong>
-                </article>
-                
-                <article class="product-card">
-                    <div class="product-image">
-                        <img src="./images/main/best-treatment-desktop.png" alt="어노브 딥 데미지 헤어 트리트먼트"/>
-                        <div class="quick-actions">
-                            <button type="button" class="like-button" aria-label="찜하기"></button>
-                            <button type="button" class="bag-button" aria-label="장바구니 담기"></button>
-                        </div>
-                    </div>
-                    <h3>어노브 딥 데미지 헤어 트리트먼트 EX 207ml</h3>
-                    <p class="desc">단백질 집중 밀착! 극손상 클리닉 트리트먼트</p>
-                    <strong>19,000원</strong>
-                    <del>22,000원</del>
-                </article>
-                
-                <article class="product-card">
-                    <div class="product-image">
-                        <img src="./images/main/best-oil-desktop.png" alt="어노브 실크 헤어 오일 에센스"/>
-                        <div class="quick-actions">
-                            <button type="button" class="like-button" aria-label="찜하기"></button>
-                            <button type="button" class="bag-button" aria-label="장바구니 담기"></button>
-                        </div>
-                    </div>
-                    <h3>어노브 실크 헤어 오일 에센스 70ml</h3>
-                    <p class="desc">끈적임 없는 고영양 오일 헤어 에센스</p>
-                    <strong>19,000원</strong>
-                </article>
-                
-                <article class="product-card soldout-card">
-                    <div class="product-image">
-                        <img src="./images/main/best-shampoo-desktop.png" alt="어노브 딥 데미지 리페어 단백질 샴푸"/>
-                        <div class="quick-actions">
-                            <button type="button" class="like-button" aria-label="찜하기"></button>
-                        </div>
-                        <span class="soldout">SOLD<br/>OUT</span>
-                    </div>
-                    <h3>어노브 딥 데미지 리페어 단백질 샴푸 500g</h3>
-                    <p class="desc">두피는 상쾌하게 모발은 부드럽게 단백질 앰플 샴푸</p>
-                    <strong>16,000원</strong>
-                    <del>18,000원</del>
-                </article>
+          <div class="slider-indicator" aria-hidden="true">
+            <span class="current-slide">01</span>
+            <i><b></b></i>
+            <span class="desktop-last">05</span>
+            <span class="tablet-last">05</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- BEST 제품 섹션 -->
+      <section class="best" id="shop">
+        <h2>BEST</h2>
+        <div class="product-grid">
+          <article class="product-card">
+            <div class="product-image">
+              <img
+                src="./images/main/best-perfume-desktop.png"
+                alt="어노브 향수 오 드 퍼퓸"
+              />
+              <div class="quick-actions">
+                <button
+                  type="button"
+                  class="like-button"
+                  aria-label="찜하기"
+                ></button>
+                <button
+                  type="button"
+                  class="bag-button"
+                  aria-label="장바구니 담기"
+                ></button>
+              </div>
             </div>
-        </section>
-        
-        <!-- 브랜드 비주얼 섹션 -->
-        <section class="brand-visual" aria-label="브랜드 스토리 영상">
-            <video autoplay muted loop playsinline src="./images/main/brand-desktop.mp4">
-                어노브 브랜드 스토리 클로즈업
-            </video>
-            <div class="thumbs" aria-label="브랜드 이미지 선택">
-                <button type="button" class="is-active">
-                    <img src="./images/main/story-thumb-0.jpg" alt="화보영상 1"/>
-                </button>
-                <button type="button">
-                    <img src="./images/main/story-thumb-1.png" alt="화보 2"/>
-                </button>
-                <button type="button">
-                    <img src="./images/main/story-thumb-2.png" alt="화보 3"/>
-                </button>
-                <button type="button">
-                    <img src="./images/main/story-thumb-3.png" alt="화보 4"/>
-                </button>
-                <button type="button">
-                    <img src="./images/main/story-thumb-4.png" alt="화보 5"/>
-                </button>
-                <button type="button">
-                    <img src="./images/main/story-thumb-5.png" alt="화보 6"/>
-                </button>
-                <button type="button">
-                    <img src="./images/main/story-thumb-6.png" alt="화보 7"/>
-                </button>
+            <h3>어노브 향수 오 드 퍼퓸+미니듀오 증정</h3>
+            <p class="desc">
+              포근하게 스며들어 오랫동안 살결에 남는 나만의 분위기. 당신만의
+              분위기와 우아함을 더해줄 어노브 오 드 퍼퓸
+            </p>
+            <strong>49,000원</strong>
+          </article>
+
+          <article class="product-card">
+            <div class="product-image">
+              <img
+                src="./images/main/best-treatment-desktop.png"
+                alt="어노브 딥 데미지 헤어 트리트먼트"
+              />
+              <div class="quick-actions">
+                <button
+                  type="button"
+                  class="like-button"
+                  aria-label="찜하기"
+                ></button>
+                <button
+                  type="button"
+                  class="bag-button"
+                  aria-label="장바구니 담기"
+                ></button>
+              </div>
             </div>
-        </section>
-        
-        <!-- 브랜드 카피 섹션 -->
-        <section class="brand-copy" id="story">
-            <h2>BRAND STORY</h2>
-            <p>부드러운 머릿결과 우아하고 감각적인 향<br/>어노브로 완성하는 나만의 분위기, 지금 만나보세요</p>
-            <a href="#" class="view-link"><span></span>VIEW</a>
-        </section>
-        
-        <!-- 포토 리뷰 섹션 -->
-        <section class="reviews" id="community">
-            <div class="section-head">
-                <h2>PHOTO REVIEW</h2>
-                <span>@unove.kr</span>
+            <h3>어노브 딥 데미지 헤어 트리트먼트 EX 207ml</h3>
+            <p class="desc">단백질 집중 밀착! 극손상 클리닉 트리트먼트</p>
+            <strong>19,000원</strong>
+            <del>22,000원</del>
+          </article>
+
+          <article class="product-card">
+            <div class="product-image">
+              <img
+                src="./images/main/best-oil-desktop.png"
+                alt="어노브 실크 헤어 오일 에센스"
+              />
+              <div class="quick-actions">
+                <button
+                  type="button"
+                  class="like-button"
+                  aria-label="찜하기"
+                ></button>
+                <button
+                  type="button"
+                  class="bag-button"
+                  aria-label="장바구니 담기"
+                ></button>
+              </div>
             </div>
-            <div class="review-wrap">
-                <button type="button" class="review-nav prev" aria-label="이전 리뷰"></button>
-                <div class="review-strip" aria-label="포토 리뷰 목록">
-                    <img src="./images/main/review-1.png" alt="포토 리뷰 1"/>
-                    <img src="./images/main/review-2.png" alt="포토 리뷰 2"/>
-                    <img src="./images/main/review-3.png" alt="포토 리뷰 3"/>
-                    <img src="./images/main/review-4.png" alt="포토 리뷰 4"/>
-                    <img src="./images/main/review-5.png" alt="포토 리뷰 5"/>
-                    <img src="./images/main/review-6.png" alt="포토 리뷰 6"/>
-                    <img src="./images/main/review-7.png" alt="포토 리뷰 7"/>
-                    <img src="./images/main/review-8.png" alt="포토 리뷰 8"/>
-                </div>
-                <button type="button" class="review-nav next" aria-label="다음 리뷰"></button>
+            <h3>어노브 실크 헤어 오일 에센스 70ml</h3>
+            <p class="desc">끈적임 없는 고영양 오일 헤어 에센스</p>
+            <strong>19,000원</strong>
+          </article>
+
+          <article class="product-card soldout-card">
+            <div class="product-image">
+              <img
+                src="./images/main/best-shampoo-desktop.png"
+                alt="어노브 딥 데미지 리페어 단백질 샴푸"
+              />
+              <div class="quick-actions">
+                <button
+                  type="button"
+                  class="like-button"
+                  aria-label="찜하기"
+                ></button>
+              </div>
+              <span class="soldout">SOLD<br />OUT</span>
             </div>
-        </section>
+            <h3>어노브 딥 데미지 리페어 단백질 샴푸 500g</h3>
+            <p class="desc">두피는 상쾌하게 모발은 부드럽게 단백질 앰플 샴푸</p>
+            <strong>16,000원</strong>
+            <del>18,000원</del>
+          </article>
+        </div>
+      </section>
+
+      <!-- 브랜드 비주얼 섹션 -->
+      <section class="brand-visual" aria-label="브랜드 스토리 영상">
+        <video
+          autoplay
+          muted
+          loop
+          playsinline
+          src="./images/main/brand-desktop.mp4"
+        >
+          어노브 브랜드 스토리 클로즈업
+        </video>
+        <div class="thumbs" aria-label="브랜드 이미지 선택">
+          <button type="button" class="is-active">
+            <img src="./images/main/story-thumb-0.jpg" alt="화보영상 1" />
+          </button>
+          <button type="button">
+            <img src="./images/main/story-thumb-1.png" alt="화보 2" />
+          </button>
+          <button type="button">
+            <img src="./images/main/story-thumb-2.png" alt="화보 3" />
+          </button>
+          <button type="button">
+            <img src="./images/main/story-thumb-3.png" alt="화보 4" />
+          </button>
+          <button type="button">
+            <img src="./images/main/story-thumb-4.png" alt="화보 5" />
+          </button>
+          <button type="button">
+            <img src="./images/main/story-thumb-5.png" alt="화보 6" />
+          </button>
+          <button type="button">
+            <img src="./images/main/story-thumb-6.png" alt="화보 7" />
+          </button>
+        </div>
+      </section>
+
+      <!-- 브랜드 카피 섹션 -->
+      <section class="brand-copy" id="story">
+        <h2>BRAND STORY</h2>
+        <p>
+          부드러운 머릿결과 우아하고 감각적인 향<br />어노브로 완성하는 나만의
+          분위기, 지금 만나보세요
+        </p>
+        <a href="#" class="view-link"><span></span>VIEW</a>
+      </section>
+
+      <!-- 포토 리뷰 섹션 -->
+      <section class="reviews" id="community">
+        <div class="section-head">
+          <h2>PHOTO REVIEW</h2>
+          <span>@unove.kr</span>
+        </div>
+        <div class="review-wrap">
+          <button
+            type="button"
+            class="review-nav prev"
+            aria-label="이전 리뷰"
+          ></button>
+          <div class="review-strip" aria-label="포토 리뷰 목록">
+            <img src="./images/main/review-1.png" alt="포토 리뷰 1" />
+            <img src="./images/main/review-2.png" alt="포토 리뷰 2" />
+            <img src="./images/main/review-3.png" alt="포토 리뷰 3" />
+            <img src="./images/main/review-4.png" alt="포토 리뷰 4" />
+            <img src="./images/main/review-5.png" alt="포토 리뷰 5" />
+            <img src="./images/main/review-6.png" alt="포토 리뷰 6" />
+            <img src="./images/main/review-7.png" alt="포토 리뷰 7" />
+            <img src="./images/main/review-8.png" alt="포토 리뷰 8" />
+          </div>
+          <button
+            type="button"
+            class="review-nav next"
+            aria-label="다음 리뷰"
+          ></button>
+        </div>
+      </section>
     </main>
-    
+
     <!-- 푸터 영역 -->
     <footer class="footer">
-        <div class="footer-inner">
-            <div class="footer-info">
-                <strong class="footer-logo">UNOVE</strong>
-                <nav aria-label="푸터 약관 메뉴">
-                    <a href="#">홈</a>
-                    <a href="#">이용약관</a>
-                    <a href="#"><b>개인정보처리방침</b></a>
-                    <a href="#">이용안내</a>
-                </nav>
-                <p>© 2023 UNOVE</p>
-                <p>상호명 : <b>주식회사 와이어트</b><span class="pipe"></span>대표자 : <b>권규석</b></p>
-                <p>사업장 소재지 : 06097 세별빌딩 9층 서울특별시 강남구 봉은사로 427</p>
-                <p>사업자등록번호 : 120-86-08810 <b>[사업자정보확인]</b></p>
-                <p>통신판매업신고번호제 2021-서울강남-02122 호</p>
-                <p>계좌 정보613-000786-01-032 기업은행 (주)와이어트</p>
-                <p class="mail">대표메일 : un@wyattcorp.com<br/>글로벌 문의(US) : us.support@wyattcorp.com</p>
-                <p class="copyright">※ UNOVE에서 제공하는 모든 컨텐츠는 저작권법에 보호받는 저작물로서, 무단으로 복제, 배포하는 경우에는 저작권법에 의하여 처벌을 받을 수 있습니다.</p>
-            </div>
-            <div class="cs">
-                <h2>CS CENTER</h2>
-                <strong>1670-5875</strong>
-                <p>평일 <b>AM</b> 09:00 ~ <b>PM</b> 17:00</p>
-                <p>점심 <b>PM</b> 12:00 ~ <b>PM</b> 01:00</p>
-                <p>토/일요일 및 공휴일 휴무</p>
-            </div>
-            <div class="sns">
-                <h2>SNS</h2>
-                <a href="#" aria-label="Instagram"><img src="./images/main/instagram.png" alt="인스타그램"/></a>
-                <a href="#" aria-label="Facebook"><img src="./images/main/facebook.png" alt="페이스북"/></a>
-            </div>
+      <div class="footer-inner">
+        <div class="footer-info">
+          <strong class="footer-logo">UNOVE</strong>
+          <nav aria-label="푸터 약관 메뉴">
+            <a href="#">홈</a>
+            <a href="#">이용약관</a>
+            <a href="#"><b>개인정보처리방침</b></a>
+            <a href="#">이용안내</a>
+          </nav>
+          <p>© 2023 UNOVE</p>
+          <p>
+            상호명 : <b>주식회사 와이어트</b><span class="pipe"></span>대표자 :
+            <b>권규석</b>
+          </p>
+          <p>
+            사업장 소재지 : 06097 세별빌딩 9층 서울특별시 강남구 봉은사로 427
+          </p>
+          <p>사업자등록번호 : 120-86-08810 <b>[사업자정보확인]</b></p>
+          <p>통신판매업신고번호제 2021-서울강남-02122 호</p>
+          <p>계좌 정보613-000786-01-032 기업은행 (주)와이어트</p>
+          <p class="mail">
+            대표메일 : un@wyattcorp.com<br />글로벌 문의(US) :
+            us.support@wyattcorp.com
+          </p>
+          <p class="copyright">
+            ※ UNOVE에서 제공하는 모든 컨텐츠는 저작권법에 보호받는 저작물로서,
+            무단으로 복제, 배포하는 경우에는 저작권법에 의하여 처벌을 받을 수
+            있습니다.
+          </p>
         </div>
+        <div class="cs">
+          <h2>CS CENTER</h2>
+          <strong>1670-5875</strong>
+          <p>평일 <b>AM</b> 09:00 ~ <b>PM</b> 17:00</p>
+          <p>점심 <b>PM</b> 12:00 ~ <b>PM</b> 01:00</p>
+          <p>토/일요일 및 공휴일 휴무</p>
+        </div>
+        <div class="sns">
+          <h2>SNS</h2>
+          <a href="#" aria-label="Instagram"
+            ><img src="./images/main/instagram.png" alt="인스타그램"
+          /></a>
+          <a href="#" aria-label="Facebook"
+            ><img src="./images/main/facebook.png" alt="페이스북"
+          /></a>
+        </div>
+      </div>
     </footer>
-    
+
     <!-- 플로팅 버튼 & 토스트 -->
     <div class="floating">
-        <button class="float-top" id="btn-top" aria-label="맨 위로"><i class="fa-solid fa-chevron-up"></i></button>
-        <button class="float-inquiry" aria-label="문의하기"><i class="fa-regular fa-comment-dots"></i></button>
+      <button class="float-top" id="btn-top" aria-label="맨 위로">
+        <i class="fa-solid fa-chevron-up"></i>
+      </button>
+      <button class="float-inquiry" aria-label="문의하기">
+        <i class="fa-regular fa-comment-dots"></i>
+      </button>
     </div>
-    <div class="toast" role="status" aria-live="polite"></div>
-</body>
+  </body>
 </html>

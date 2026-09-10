@@ -2,1170 +2,1226 @@
 
 /* ════════════════ 🌐 SUIT 한글 웹폰트 패키지 정의 ════════════════ */
 @font-face {
-    font-family: 'Suit';
-    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_suit@1.0/SUIT-Thin.woff2') format('woff2');
-    font-weight: 100;
-    font-display: swap;
+  font-family: "Suit";
+  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_suit@1.0/SUIT-Thin.woff2")
+    format("woff2");
+  font-weight: 100;
+  font-display: swap;
 }
 @font-face {
-    font-family: 'Suit';
-    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_suit@1.0/SUIT-ExtraLight.woff2') format('woff2');
-    font-weight: 200;
-    font-display: swap;
+  font-family: "Suit";
+  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_suit@1.0/SUIT-ExtraLight.woff2")
+    format("woff2");
+  font-weight: 200;
+  font-display: swap;
 }
 @font-face {
-    font-family: 'Suit';
-    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_suit@1.0/SUIT-Light.woff2') format('woff2');
-    font-weight: 300;
-    font-display: swap;
+  font-family: "Suit";
+  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_suit@1.0/SUIT-Light.woff2")
+    format("woff2");
+  font-weight: 300;
+  font-display: swap;
 }
 @font-face {
-    font-family: 'Suit';
-    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_suit@1.0/SUIT-Regular.woff2') format('woff2');
-    font-weight: normal;
-    font-display: swap;
+  font-family: "Suit";
+  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_suit@1.0/SUIT-Regular.woff2")
+    format("woff2");
+  font-weight: normal;
+  font-display: swap;
 }
 @font-face {
-    font-family: 'Suit';
-    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_suit@1.0/SUIT-Medium.woff2') format('woff2');
-    font-weight: 500;
-    font-display: swap;
+  font-family: "Suit";
+  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_suit@1.0/SUIT-Medium.woff2")
+    format("woff2");
+  font-weight: 500;
+  font-display: swap;
 }
 @font-face {
-    font-family: 'Suit';
-    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_suit@1.0/SUIT-SemiBold.woff2') format('woff2');
-    font-weight: 600;
-    font-display: swap;
+  font-family: "Suit";
+  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_suit@1.0/SUIT-SemiBold.woff2")
+    format("woff2");
+  font-weight: 600;
+  font-display: swap;
 }
 @font-face {
-    font-family: 'Suit';
-    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_suit@1.0/SUIT-Bold.woff2') format('woff2');
-    font-weight: 700;
-    font-display: swap;
+  font-family: "Suit";
+  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_suit@1.0/SUIT-Bold.woff2")
+    format("woff2");
+  font-weight: 700;
+  font-display: swap;
 }
 @font-face {
-    font-family: 'Suit';
-    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_suit@1.0/SUIT-ExtraBold.woff2') format('woff2');
-    font-weight: 800;
-    font-display: swap;
+  font-family: "Suit";
+  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_suit@1.0/SUIT-ExtraBold.woff2")
+    format("woff2");
+  font-weight: 800;
+  font-display: swap;
 }
 @font-face {
-    font-family: 'Suit';
-    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_suit@1.0/SUIT-Heavy.woff2') format('woff2');
-    font-weight: 900;
-    font-display: swap;
+  font-family: "Suit";
+  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_suit@1.0/SUIT-Heavy.woff2")
+    format("woff2");
+  font-weight: 900;
+  font-display: swap;
 }
 
 /* ════════════════ 공통 초기화 및 변수 세팅 ════════════════ */
 :root {
-    --navy: #101a33;
-    --pink: #f3d4d4;
-    --accent: #ffaac9;
-    --text: #323232;
-    --footer: rgba(235, 235, 235, 0.96);
-    --content: min(75vw, 1440px);
+  --navy: #101a33;
+  --pink: #f3d4d4;
+  --accent: #ffaac9;
+  --text: #323232;
+  --footer: rgba(235, 235, 235, 0.96);
+  --content: min(75vw, 1440px);
 }
 
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 body {
-    font-family: 'Suit', sans-serif;
-    color: var(--navy);
-    background-color: #fff;
-    -webkit-font-smoothing: antialiased;
+  font-family: "Suit", sans-serif;
+  color: var(--navy);
+  background-color: #fff;
+  -webkit-font-smoothing: antialiased;
 }
 
-ul, ol, li {
-    list-style: none;
+ul,
+ol,
+li {
+  list-style: none;
 }
 
 a {
-    text-decoration: none;
-    color: inherit;
+  text-decoration: none;
+  color: inherit;
 }
 
 button {
-    background: none;
-    border: none;
-    cursor: pointer;
-    padding: 0;
-    font-family: inherit;
-    color: inherit;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  font-family: inherit;
+  color: inherit;
 }
 
 img {
-    display: block;
-    max-width: 100%;
+  display: block;
+  max-width: 100%;
 }
 
 /* ════════════════ 띠배너 컴포넌트 ════════════════ */
 #top-banner {
-    position: relative;
-    background-color: #f6e6e6;
-    height: 38px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    z-index: 110;
-    cursor: pointer;
+  position: relative;
+  background-color: #f6e6e6;
+  height: 38px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 110;
+  cursor: pointer;
 }
 
 #top-banner p {
-    font-size: 12px;
-    font-weight: 600;
-    color: #101A33;
-    letter-spacing: -0.2px;
-    display: block;
+  font-size: 12px;
+  font-weight: 600;
+  color: #101a33;
+  letter-spacing: -0.2px;
+  display: block;
 }
 
 #top-banner button {
-    position: absolute;
-    right: 24px;
-    top: 50%;
-    transform: translateY(-50%);
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    color: #101A33;
-    font-size: 14px;
-    opacity: 0.5;
-    transition: opacity 0.2s;
+  position: absolute;
+  right: 24px;
+  top: 50%;
+  transform: translateY(-50%);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  color: #101a33;
+  font-size: 14px;
+  opacity: 0.5;
+  transition: opacity 0.2s;
 }
 
 #top-banner button:hover {
-    opacity: 1;
+  opacity: 1;
 }
 
 /* ════════════════ 투명 헤더 절대 배치 상위 축 ════════════════ */
 .header-wrapper {
-    position: relative;
-    top: 0;
-    width: 100%;
-    z-index: 100;
+  position: relative;
+  top: 0;
+  width: 100%;
+  z-index: 100;
 }
 
 /* ════════════════ 데스크톱 상단 투명 헤더 ════════════════ */
 #header-desktop {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 80px;
-    z-index: 100;
-    background-color: transparent;
-    transition: background-color 0.3s ease;
-    
-    &:hover {
-        background-color: #fff;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 80px;
+  z-index: 100;
+  background-color: transparent;
+  transition: background-color 0.3s ease;
 
-        .logo a {
-            color: #111a30;
-        }
+  &:hover {
+    background-color: #fff;
 
-        /* 1차 메뉴 텍스트 색상 변경 */
-        .gnb > li > a {
-            color: #111a30;
-
-            &:hover {
-                color: var(--accent);
-            }
-        }
-
-        /* 🎯 서브메뉴 노출 (좌우 -50% 축 유지하며 하단으로 자연스럽게 등장) */
-        .submenu {
-            opacity: 1;
-            visibility: visible;
-            transform: translateX(-50%) translateY(0);
-        }
-
-        .util-icons button {
-            color: #111a30;
-
-            &:hover {
-                color: var(--accent);
-                opacity: 1;
-            }
-        }
+    .logo a {
+      color: #111a30;
     }
+
+    /* 1차 메뉴 텍스트 색상 변경 */
+    .gnb > li > a {
+      color: #111a30;
+
+      &:hover {
+        color: var(--accent);
+      }
+    }
+
+    .util-icons button {
+      color: #111a30;
+
+      &:hover {
+        color: var(--accent);
+        opacity: 1;
+      }
+    }
+  }
 }
 
 #header-desktop:hover {
-    background-color: #ffffff;
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+  background-color: #ffffff;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
 }
 
 .header-inner {
-    max-width: 1440px;
-    height: 100%;
-    margin: 0 auto;
-    padding: 0 40px;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    position: relative;
+  max-width: 1440px;
+  height: 100%;
+  margin: 0 auto;
+  padding: 0 40px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: relative;
 }
 
 /* 브랜드 메인 로고 */
 .logo {
-    font-family: 'Playfair Display', serif;
-    font-size: 40px;
-    font-weight: 700;
-    letter-spacing: 1.5px;
-    font-style: normal;
+  font-family: "Playfair Display", serif;
+  font-size: 40px;
+  font-weight: 700;
+  letter-spacing: 1.5px;
+  font-style: normal;
 
-    a {
-        color: #fff;
-        text-decoration: none;
-        transition: color 0.3s ease;
-    }
+  a {
+    color: #fff;
+    text-decoration: none;
+    transition: color 0.3s ease;
+  }
 }
 
 /* 주 네비게이션 (GNB) */
 .gnb {
-    display: flex;
-    align-items: center;
-    gap: 48px;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translateX(-50%) translateY(-50%);
-    height: 100%;
-    margin: 0;
-    padding: 0;
+  display: flex;
+  align-items: center;
+  gap: 48px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translateX(-50%) translateY(-50%);
+  height: 100%;
+  margin: 0;
+  padding: 0;
 }
 
 .gnb > li {
-    position: relative;
-    height: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+  position: relative;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .gnb > li > a {
-    font-family: 'Playfair Display', serif;
-    font-size: 24px;
+  font-family: "Playfair Display", serif;
+  font-size: 24px;
+  font-weight: 700;
+  color: #fff;
+  letter-spacing: 1px;
+  font-style: normal;
+  text-decoration: none;
+  display: block;
+  transition: color 0.3s ease;
+}
+
+/* 데스크톱 통합 Mega Menu */
+.mega-menu {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 100%;
+  background-color: #fff;
+  border-top: 1px solid rgba(16, 26, 51, 0.08);
+  box-shadow: 0 14px 24px rgba(0, 0, 0, 0.06);
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(-6px);
+  pointer-events: none;
+  transition:
+    opacity 220ms ease,
+    visibility 220ms ease,
+    transform 220ms ease;
+}
+
+#header-desktop.is-mega-open {
+  background-color: #fff;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+}
+
+#header-desktop.is-mega-open .logo a,
+#header-desktop.is-mega-open .gnb > li > a,
+#header-desktop.is-mega-open .util-icons button {
+  color: #111a30;
+}
+
+#header-desktop.is-mega-open .mega-menu {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+  pointer-events: auto;
+}
+
+.mega-menu-inner {
+  max-width: 1440px;
+  min-height: 158px;
+  margin: 0 auto;
+  padding: 14px 40px 24px;
+  position: relative;
+}
+
+.mega-menu-column {
+  position: absolute;
+  top: 14px;
+  left: var(--column-center-x, 50%);
+  width: 150px;
+  text-align: center;
+  transform: translateX(-50%);
+}
+.mega-menu-column ul {
+  margin: 0;
+  padding: 0;
+}
+.mega-menu-column li {
+  padding: 2px 0;
+}
+
+.mega-menu-column li a {
+  display: block;
+  padding: 5px 8px;
+  color: #666;
+  font-family: "Noto Sans KR", sans-serif;
+  font-size: 14px;
+  font-weight: 500;
+  text-decoration: none;
+  white-space: nowrap;
+  transition: color 0.2s ease;
+
+  &:hover {
+    color: var(--navy);
     font-weight: 700;
-    color: #fff;
-    letter-spacing: 1px;
-    font-style: normal;
-    text-decoration: none;
-    display: block;
-    transition: color 0.3s ease;
-}
-
-/* 🎯 서브메뉴 드롭다운 (정중앙 정렬 완벽 반영) */
-.submenu {
-    position: absolute;
-    top: 100%;
-    left: 50%;
-    transform: translateX(-50%);
-    
-    margin: 0;
-    padding: 12px 0;
-    min-width: 130px;
-    text-align: center;
-    background-color: #fff;
-    opacity: 0;
-    visibility: hidden;
-    transition: all 0.3s ease;
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.06);
-    border-radius: 0 0 8px 8px;
-}
-
-.submenu li {
-    padding: 4px 0;
-}
-
-.submenu li a {
-    font-family: 'Noto Sans KR', sans-serif;
-    font-size: 14px;
-    font-weight: 500;
-    color: #666;
-    text-decoration: none;
-    white-space: nowrap;
-    display: block;
-    padding: 6px 16px;
-    transition: color 0.2s ease, background-color 0.2s ease;
-
-    &:hover {
-        color: var(--navy);
-        font-weight: 700;
-    }
+  }
 }
 
 /* 우측 유틸리티 영역 */
 .header-right {
-    display: flex;
-    align-items: center;
-    gap: 28px;
+  display: flex;
+  align-items: center;
+  gap: 28px;
 }
 
 .util-icons {
-    display: flex;
-    align-items: center;
-    gap: 20px;
+  display: flex;
+  align-items: center;
+  gap: 20px;
 }
 
 .util-icons button {
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    width: 24px;
-    height: 24px;
-    color: #fff;
-    background: none;
-    border: none;
-    cursor: pointer;
-    transition: color 0.3s ease, opacity 0.2s ease;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 24px;
+  height: 24px;
+  color: #fff;
+  background: none;
+  border: none;
+  cursor: pointer;
+  transition:
+    color 0.3s ease,
+    opacity 0.2s ease;
 }
 
 .util-icons .fa-magnifying-glass {
-    font-size: 18px;
+  font-size: 18px;
 }
 
 .util-icons .fa-user {
-    font-size: 18.5px;
+  font-size: 18.5px;
 }
 
 .util-icons .fa-bag-shopping {
-    font-size: 19px;
-    transform: translateY(-0.5px);
+  font-size: 19px;
+  transform: translateY(-0.5px);
 }
 
 /* ════════════════ 모바일 상단 헤더 ════════════════ */
 #header-mobile {
-    display: none;
-    position: relative;
-    width: 100%;
-    height: 56px;
-    padding: 0 20px;
-    align-items: center;
-    justify-content: space-between;
-    z-index: 100;
-    background-color: #ffffff;
-    color: var(--navy);
-    border-bottom: 1px solid rgba(16, 26, 51, 0.08);
+  display: none;
+  position: relative;
+  width: 100%;
+  height: 56px;
+  padding: 0 20px;
+  align-items: center;
+  justify-content: space-between;
+  z-index: 100;
+  background-color: #ffffff;
+  color: var(--navy);
+  border-bottom: 1px solid rgba(16, 26, 51, 0.08);
 }
 
 #header-mobile:hover,
 #header-mobile.is-scrolled {
-    background-color: rgba(255, 255, 255, 0.94);
-    color: var(--navy);
-    border-bottom: 1px solid rgba(16, 26, 51, 0.08);
+  background-color: rgba(255, 255, 255, 0.94);
+  color: var(--navy);
+  border-bottom: 1px solid rgba(16, 26, 51, 0.08);
 }
 
 .mobile-menu-btn {
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    width: 24px;
-    height: 24px;
-    color: inherit;
-    font-size: 20px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 24px;
+  height: 24px;
+  color: inherit;
+  font-size: 20px;
 }
 
 .mobile-logo {
-    font-family: 'Playfair Display', Georgia, serif;
-    font-size: 24px;
-    font-weight: 700;
-    color: inherit;
-    letter-spacing: 1px;
-    position: absolute;
-    left: 50%;
-    transform: translateX(-50%);
-    text-decoration: none;
-    display: inline-block;
+  font-family: "Playfair Display", Georgia, serif;
+  font-size: 24px;
+  font-weight: 700;
+  color: inherit;
+  letter-spacing: 1px;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  text-decoration: none;
+  display: inline-block;
 }
 
 .mobile-icons {
-    display: flex;
-    align-items: center;
-    gap: 16px;
+  display: flex;
+  align-items: center;
+  gap: 16px;
 }
 
 .mobile-icons button {
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    width: 22px;
-    height: 22px;
-    color: inherit;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 22px;
+  height: 22px;
+  color: inherit;
 }
 
 .mobile-icons .fa-user {
-    font-size: 17.5px;
+  font-size: 17.5px;
 }
 
 .mobile-icons .fa-bag-shopping {
-    font-size: 18px;
+  font-size: 18px;
 }
 
 /* ════════════════ 모바일 메뉴 드로어 & 오버레이 ════════════════ */
 .mobile-menu-overlay {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100vh;
-    background-color: rgba(0, 0, 0, 0.5);
-    z-index: 998;
-    opacity: 0;
-    visibility: hidden;
-    transition: all 0.3s ease;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 998;
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.3s ease;
 
-    &.active {
-        opacity: 1;
-        visibility: visible;
-    }
+  &.active {
+    opacity: 1;
+    visibility: visible;
+  }
 }
 
 .mobile-menu-drawer {
-    position: fixed;
-    top: 0;
-    left: -100%;
-    width: 80%;
-    max-width: 320px;
-    height: 100vh;
-    background-color: #fff;
-    z-index: 999;
-    transition: left 0.35s cubic-bezier(0.25, 1, 0.5, 1);
-    display: flex;
-    flex-direction: column;
-    box-shadow: 4px 0 16px rgba(0, 0, 0, 0.1);
+  position: fixed;
+  top: 0;
+  left: -100%;
+  width: 80%;
+  max-width: 320px;
+  height: 100vh;
+  background-color: #fff;
+  z-index: 999;
+  transition: left 0.35s cubic-bezier(0.25, 1, 0.5, 1);
+  display: flex;
+  flex-direction: column;
+  box-shadow: 4px 0 16px rgba(0, 0, 0, 0.1);
 
-    &.active {
-        left: 0;
-    }
+  &.active {
+    left: 0;
+  }
 }
 
 .drawer-header {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 20px;
-    border-bottom: 1px solid #eee;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px;
+  border-bottom: 1px solid #eee;
 
-    .drawer-logo {
-        font-family: 'Playfair Display', serif;
-        font-size: 24px;
-        font-weight: 700;
-        color: var(--navy);
-    }
+  .drawer-logo {
+    font-family: "Playfair Display", serif;
+    font-size: 24px;
+    font-weight: 700;
+    color: var(--navy);
+  }
 
-    .drawer-close-btn {
-        background: none;
-        border: none;
-        font-size: 24px;
-        color: var(--navy);
-        cursor: pointer;
-    }
+  .drawer-close-btn {
+    background: none;
+    border: none;
+    font-size: 24px;
+    color: var(--navy);
+    cursor: pointer;
+  }
 }
 
 .mobile-gnb {
-    margin: 0;
-    padding: 10px 0;
-    overflow-y: auto;
+  margin: 0;
+  padding: 10px 0;
+  overflow-y: auto;
 
-    li {
-        border-bottom: 1px solid #f9f9f9;
+  li {
+    border-bottom: 1px solid #f9f9f9;
 
-        .menu-title {
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            padding: 16px 20px;
+    .menu-title {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 16px 20px;
 
-            a {
-                font-family: 'Playfair Display', serif;
-                font-size: 18px;
-                font-weight: 700;
-                color: var(--navy);
-                text-decoration: none;
-            }
+      a {
+        font-family: "Playfair Display", serif;
+        font-size: 18px;
+        font-weight: 700;
+        color: var(--navy);
+        text-decoration: none;
+      }
 
-            .toggle-sub-btn {
-                background: none;
-                border: none;
-                color: #888;
-                font-size: 14px;
-                padding: 4px 8px;
-                cursor: pointer;
-                transition: transform 0.3s ease;
-            }
-        }
-
-        &.open .toggle-sub-btn {
-            transform: rotate(180deg);
-        }
+      .toggle-sub-btn {
+        background: none;
+        border: none;
+        color: #888;
+        font-size: 14px;
+        padding: 4px 8px;
+        cursor: pointer;
+        transition: transform 0.3s ease;
+      }
     }
+
+    &.open .toggle-sub-btn {
+      transform: rotate(180deg);
+    }
+  }
 }
 
 .mobile-submenu {
-    background-color: #fcfcfc;
-    max-height: 0;
-    overflow: hidden;
-    transition: max-height 0.3s ease;
+  background-color: #fcfcfc;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.3s ease;
 
-    li a {
-        display: block;
-        padding: 12px 20px 12px 32px;
-        font-family: 'Noto Sans KR', sans-serif;
-        font-size: 14px;
-        color: #666;
-        text-decoration: none;
+  li a {
+    display: block;
+    padding: 12px 20px 12px 32px;
+    font-family: "Noto Sans KR", sans-serif;
+    font-size: 14px;
+    color: #666;
+    text-decoration: none;
 
-        &:hover {
-            color: var(--accent);
-        }
+    &:hover {
+      color: var(--accent);
     }
+  }
 }
 
 .mobile-gnb li.open .mobile-submenu {
-    max-height: 300px;
+  max-height: 300px;
 }
 
 /* ════════════════ 히어로 배너 영역 ════════════════ */
 #hero {
-    width: 100%;
-    height: 550px;
-    overflow: hidden;
-    background-color: #f7dcd7;
+  width: 100%;
+  height: 550px;
+  overflow: hidden;
+  background-color: #f7dcd7;
 }
 
 #hero img {
-    width: 100%;
-    height: 100%;
-    display: block;
-    object-fit: cover;
+  width: 100%;
+  height: 100%;
+  display: block;
+  object-fit: cover;
 }
 
 #hero-desktop-img {
-    display: block;
+  display: block;
 }
 
 #hero-mobile-img {
-    display: none !important;
+  display: none !important;
 }
 
 /* ════════════════ 대메뉴 카테고리 탭 바 ════════════════ */
 #sub-nav {
-    background-color: #111a30;
-    display: flex;
-    justify-content: center;
-    gap: 54px;
-    padding: 22px 0;
+  background-color: #111a30;
+  display: flex;
+  justify-content: center;
+  gap: 54px;
+  padding: 22px 0;
 }
 
 .cat-btn {
-    font-family: 'Playfair Display', serif;
-    font-size: 15px;
-    font-weight: 700;
-    color: rgba(255, 255, 255, 0.4);
-    letter-spacing: 1px;
-    padding-bottom: 2px;
-    border-bottom: 2px solid transparent;
-    transition: color 0.2s, border-color 0.2s;
+  font-family: "Playfair Display", serif;
+  font-size: 15px;
+  font-weight: 700;
+  color: rgba(255, 255, 255, 0.4);
+  letter-spacing: 1px;
+  padding-bottom: 2px;
+  border-bottom: 2px solid transparent;
+  transition:
+    color 0.2s,
+    border-color 0.2s;
 }
 
-.cat-btn.active, .cat-btn:hover {
-    color: #ffffff;
-    border-bottom: 2px solid #ffffff;
+.cat-btn.active,
+.cat-btn:hover {
+  color: #ffffff;
+  border-bottom: 2px solid #ffffff;
 }
 
 /* ════════════════ 메인 콘텐츠 섹션 레이아웃 ════════════════ */
 #product-section {
-    max-width: 1440px;
-    margin: 0 auto;
-    padding: 50px 40px;
+  max-width: 1440px;
+  margin: 0 auto;
+  padding: 50px 40px;
 }
 
 .controls-row {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    border-bottom: 1px solid #e2e8f0;
-    padding-bottom: 14px;
-    margin-bottom: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 1px solid #e2e8f0;
+  padding-bottom: 14px;
+  margin-bottom: 30px;
 }
 
 .item-menu {
-    display: flex;
-    align-items: center;
-    gap: 12px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
 }
 
 .item-count {
-    font-family: 'Playfair Display', serif;
-    font-size: 14px;
-    font-weight: 700;
-    letter-spacing: 0.5px;
-    color: #111a30;
+  font-family: "Playfair Display", serif;
+  font-size: 14px;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+  color: #111a30;
 }
 
 .sub-filters {
-    display: flex;
-    gap: 20px;
+  display: flex;
+  gap: 20px;
 }
 
 .sf-btn {
-    font-family: 'Suit', sans-serif;
-    font-size: 13px;
-    color: #767676;
-    font-weight: 500;
-    transition: color 0.2s;
+  font-family: "Suit", sans-serif;
+  font-size: 13px;
+  color: #767676;
+  font-weight: 500;
+  transition: color 0.2s;
 }
 
-.sf-btn.active, .sf-btn:hover {
-    color: #111a30;
-    font-weight: 700;
+.sf-btn.active,
+.sf-btn:hover {
+  color: #111a30;
+  font-weight: 700;
 }
 
 .sort-wrap {
-    position: relative;
+  position: relative;
 }
 
 #sort-btn {
-    font-family: 'Suit', sans-serif;
-    width: 110px;
-    background-color: #DEE2FF;
-    border-radius: 4px;
-    padding: 8px 12px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    gap: 6px;
-    font-size: 13px;
-    color: #111a30;
-    font-weight: 500;
+  font-family: "Suit", sans-serif;
+  width: 110px;
+  background-color: #dee2ff;
+  border-radius: 4px;
+  padding: 8px 12px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 6px;
+  font-size: 13px;
+  color: #111a30;
+  font-weight: 500;
 }
 
 #sort-btn i {
-    font-size: 11px;
-    color: #767676;
+  font-size: 11px;
+  color: #767676;
 }
 
 #sort-dropdown {
-    font-family: 'Suit', sans-serif;
-    width: 100%;
-    display: none;
-    position: absolute;
-    top: 100%;
-    right: 0;
-    padding: 8px 12px;
-    background-color: #ffffff;
-    border: 1px solid #e2e8f0;
-    z-index: 10;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+  font-family: "Suit", sans-serif;
+  width: 100%;
+  display: none;
+  position: absolute;
+  top: 100%;
+  right: 0;
+  padding: 8px 12px;
+  background-color: #ffffff;
+  border: 1px solid #e2e8f0;
+  z-index: 10;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
 }
 
 .sort-opt {
-    padding: 8px 12px;
-    font-size: 12px;
-    cursor: pointer;
+  padding: 8px 12px;
+  font-size: 12px;
+  cursor: pointer;
 }
 
 .sort-opt:hover {
-    background-color: #f8fafc;
+  background-color: #f8fafc;
 }
 
 #mobile-filters {
-    display: none;
+  display: none;
 }
 
 /* ════════════════ 상품 카드 그리드 ════════════════ */
 #product-grid {
-    display: grid;
-    grid-template-columns: repeat(4, minmax(0, 1fr));
-    justify-content: center;
-    gap: 48px 24px;
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  justify-content: center;
+  gap: 48px 24px;
 }
 
 .card {
-    display: flex;
-    flex-direction: column;
-    gap: 12px;
-    width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  width: 100%;
 }
 
 .card-img {
-    width: 100%;
-    aspect-ratio: 1 / 1;
-    border-radius: 6px;
-    overflow: hidden;
-    background-color: #f8fafc;
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  border-radius: 6px;
+  overflow: hidden;
+  background-color: #f8fafc;
 }
 
 .card-img img {
-    width: 100% !important;
-    height: 100% !important;
-    display: block;
-    object-fit: cover !important;
-    transition: transform 0.3s ease;
+  width: 100% !important;
+  height: 100% !important;
+  display: block;
+  object-fit: cover !important;
+  transition: transform 0.3s ease;
 }
 
 .card:hover .card-img img {
-    transform: scale(1.02);
+  transform: scale(1.02);
 }
 
 .card-info {
-    position: relative;
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    flex-grow: 1;
+  position: relative;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
 }
 
 .card-txt {
-    display: flex;
-    flex-direction: column;
-    width: 100%;
-    padding-right: 56px;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  padding-right: 56px;
 }
 
 .card-name {
-    font-family: 'Suit', sans-serif;
-    font-size: 15px;
-    font-weight: 500;
-    color: #000000;
-    line-height: 1.4;
-    margin-bottom: 4px;
-    white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis;
+  font-family: "Suit", sans-serif;
+  font-size: 15px;
+  font-weight: 500;
+  color: #000000;
+  line-height: 1.4;
+  margin-bottom: 4px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
 .card-desc {
-    font-family: 'Suit', sans-serif;
-    font-size: 12px;
-    color: #8e8e8e;
-    line-height: 1.4;
-    margin-bottom: 8px;
-    white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis;
+  font-family: "Suit", sans-serif;
+  font-size: 12px;
+  color: #8e8e8e;
+  line-height: 1.4;
+  margin-bottom: 8px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
 .price-row {
-    margin-top: auto;
-    display: flex;
-    align-items: baseline;
-    gap: 6px;
+  margin-top: auto;
+  display: flex;
+  align-items: baseline;
+  gap: 6px;
 }
 
 .card-price {
-    font-family: 'Suit', sans-serif;
-    font-size: 16px;
-    font-weight: 700;
-    color: #000000;
+  font-family: "Suit", sans-serif;
+  font-size: 16px;
+  font-weight: 700;
+  color: #000000;
 }
 
 .card-price-old {
-    font-family: 'Suit', sans-serif;
-    font-size: 13px;
-    color: #b5b5b5;
-    text-decoration: line-through;
+  font-family: "Suit", sans-serif;
+  font-size: 13px;
+  color: #b5b5b5;
+  text-decoration: line-through;
 }
 
 .card-actions {
-    position: absolute;
-    top: 2px;
-    right: 0;
-    display: flex;
-    align-items: center;
-    gap: 10px;
+  position: absolute;
+  top: 2px;
+  right: 0;
+  display: flex;
+  align-items: center;
+  gap: 10px;
 }
 
 .card-actions button {
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    width: 24px;
-    height: 24px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 24px;
+  height: 24px;
 }
 
 .card-actions i {
-    color: #111a30;
-    transition: transform 0.15s ease, color 0.15s ease;
+  color: #111a30;
+  transition:
+    transform 0.15s ease,
+    color 0.15s ease;
 }
 
 .wish-btn:hover i {
-    color: #e11d48;
-    transform: scale(1.08);
+  color: #e11d48;
+  transform: scale(1.08);
 }
 
 .cart-btn:hover i {
-    color: #2563eb;
-    transform: scale(1.08);
+  color: #2563eb;
+  transform: scale(1.08);
 }
 
 /* ════════════════ 하단 페이지네이션 ════════════════ */
 #pagination {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 8px;
-    margin-top: 60px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+  margin-top: 60px;
 }
 
-.pg-btn, .pg-arrow {
-    font-family: 'Suit', sans-serif;
-    width: 34px;
-    height: 34px;
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 13px;
-    color: #767676;
-    border: 1px solid transparent;
+.pg-btn,
+.pg-arrow {
+  font-family: "Suit", sans-serif;
+  width: 34px;
+  height: 34px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 13px;
+  color: #767676;
+  border: 1px solid transparent;
 }
 
 .pg-btn.active {
-    color: #111a30;
-    font-weight: 700;
-    background-color: #DEE2FF;
-    border-radius: 50px;
+  color: #111a30;
+  font-weight: 700;
+  background-color: #dee2ff;
+  border-radius: 50px;
 }
 
 #more-btn {
-    display: none;
+  display: none;
 }
 
 /* ==========================================================================
    FOOTER
    ========================================================================== */
 .footer {
-    background: var(--footer);
+  background: var(--footer);
 }
 
 .footer-inner {
-    width: var(--content);
-    min-height: 500px;
-    margin: 0 auto;
-    display: grid;
-    grid-template-columns: 1fr 220px 160px;
-    gap: 80px;
-    padding: 80px 0;
-    font-size: 13px;
-    line-height: 1.5;
+  width: var(--content);
+  min-height: 500px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr 220px 160px;
+  gap: 80px;
+  padding: 80px 0;
+  font-size: 13px;
+  line-height: 1.5;
 }
 
 .footer-inner .footer-info {
-    display: flex;
-    flex-direction: column;
+  display: flex;
+  flex-direction: column;
 }
 
 .footer-logo {
-    display: block;
-    margin-bottom: 40px;
-    font-size: 40px;
-    line-height: 1;
-    font-family: 'Playfair Display', Georgia, serif;
-    font-weight: 700;
+  display: block;
+  margin-bottom: 40px;
+  font-size: 40px;
+  line-height: 1;
+  font-family: "Playfair Display", Georgia, serif;
+  font-weight: 700;
 }
 
 .footer nav {
-    display: flex;
-    gap: 24px;
-    margin-bottom: 60px;
+  display: flex;
+  gap: 24px;
+  margin-bottom: 60px;
 }
 
 .footer p {
-    margin: 0 0 8px;
-    color: var(--text);
-    font-size: 13px;
-    line-height: 1.5;
-    font-weight: 600;
+  margin: 0 0 8px;
+  color: var(--text);
+  font-size: 13px;
+  line-height: 1.5;
+  font-weight: 600;
 }
 
 .footer .mail {
-    margin-top: 28px;
+  margin-top: 28px;
 }
 
 .copyright {
-    margin-top: 22px !important;
-    color: #727272;
+  margin-top: 22px !important;
+  color: #727272;
 }
 
 .pipe {
-    display: inline-block;
-    width: 1px;
-    height: 11px;
-    margin: 0 14px;
-    background: #000;
-    vertical-align: -1px;
+  display: inline-block;
+  width: 1px;
+  height: 11px;
+  margin: 0 14px;
+  background: #000;
+  vertical-align: -1px;
 }
 
 .cs h2,
 .sns h2 {
-    margin: 20px 0 28px;
-    font-size: 13px;
-    font-weight: 800;
+  margin: 20px 0 28px;
+  font-size: 13px;
+  font-weight: 800;
 }
 
 .cs strong {
-    display: block;
-    margin-bottom: 14px;
-    font-size: 20px;
+  display: block;
+  margin-bottom: 14px;
+  font-size: 20px;
 }
 
 .sns a {
-    display: inline-flex;
-    width: 40px;
-    height: 40px;
-    align-items: center;
-    justify-content: center;
-    margin-right: 8px;
-    border: 1px solid #000;
-    border-radius: 50%;
-    transition: transform 0.2s ease, background-color 0.2s ease;
+  display: inline-flex;
+  width: 40px;
+  height: 40px;
+  align-items: center;
+  justify-content: center;
+  margin-right: 8px;
+  border: 1px solid #000;
+  border-radius: 50%;
+  transition:
+    transform 0.2s ease,
+    background-color 0.2s ease;
 }
 
 .sns a:hover {
-    background-color: rgba(16, 26, 51, 0.05);
-    transform: translateY(-2px);
+  background-color: rgba(16, 26, 51, 0.05);
+  transform: translateY(-2px);
 }
 
 .sns img {
-    width: 16px;
-    height: 16px;
+  width: 16px;
+  height: 16px;
 }
 
 /* ==========================================================================
    FLOATING COMPONENTS & TOAST
    ========================================================================== */
 .floating {
-    position: fixed;
-    z-index: 15;
-    right: 30px;
-    bottom: 30px;
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
+  position: fixed;
+  z-index: 15;
+  right: 30px;
+  bottom: 30px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
 }
 
 .floating button {
-    width: 44px;
-    height: 44px;
-    border-radius: 50%;
-    font-size: 16px;
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    border: none;
-    transition: transform 0.22s, background-color 0.2s, color 0.2s;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  font-size: 16px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border: none;
+  transition:
+    transform 0.22s,
+    background-color 0.2s,
+    color 0.2s;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
 }
 
 .floating .float-top {
-    background-color: #ffffff;
-    color: var(--navy);
-    border: 1px solid rgba(16, 26, 51, 0.15);
+  background-color: #ffffff;
+  color: var(--navy);
+  border: 1px solid rgba(16, 26, 51, 0.15);
 }
 
 .floating .float-inquiry {
-    background-color: var(--navy);
-    color: #ffffff;
+  background-color: var(--navy);
+  color: #ffffff;
 }
 
 /* ════════════════ 반응형 미디어쿼리 ════════════════ */
 @media (max-width: 1200px) {
-    .footer-inner {
-        width: calc(100% - 80px);
-        gap: 40px;
-    }
-    #product-grid {
-        grid-template-columns: repeat(3, minmax(0, 1fr));
-        gap: 40px 20px;
-    }
-    .gnb {
-        gap: 24px;
-    }
+  .footer-inner {
+    width: calc(100% - 80px);
+    gap: 40px;
+  }
+  #product-grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 40px 20px;
+  }
+  .gnb {
+    gap: 24px;
+  }
 }
 
 /* 🎯 모바일 반응형 완벽 보정 🎯 */
 @media (max-width: 768px) {
-    #header-desktop {
-        display: none;
-    }
+  #header-desktop {
+    display: none;
+  }
 
-    #header-mobile {
-        display: flex;
-    }
+  #header-mobile {
+    display: flex;
+  }
 
-    #hero {
-        height: 360px;
-    }
+  #hero {
+    height: 360px;
+  }
 
-    #hero-desktop-img {
-        display: none !important;
-    }
+  #hero-desktop-img {
+    display: none !important;
+  }
 
-    #hero-mobile-img {
-        display: block !important;
-    }
+  #hero-mobile-img {
+    display: block !important;
+  }
 
-    #sub-nav {
-        gap: 20px;
-        padding: 16px 0;
-    }
+  #sub-nav {
+    gap: 20px;
+    padding: 16px 0;
+  }
 
-    .cat-btn {
-        font-size: 14px;
-    }
+  .cat-btn {
+    font-size: 14px;
+  }
 
-    #product-section {
-        padding: 24px 16px;
-    }
+  #product-section {
+    padding: 24px 16px;
+  }
 
-    .controls-row {
-        display: none;
-    }
+  .controls-row {
+    display: none;
+  }
 
-    #mobile-filters {
-        display: flex;
-        gap: 8px;
-        overflow-x: auto;
-        padding-bottom: 12px;
-        margin-bottom: 20px;
-        -webkit-overflow-scrolling: touch;
-    }
+  #mobile-filters {
+    display: flex;
+    gap: 8px;
+    overflow-x: auto;
+    padding-bottom: 12px;
+    margin-bottom: 20px;
+    -webkit-overflow-scrolling: touch;
+  }
 
-    .pill {
-        font-family: 'Suit', sans-serif;
-        font-weight: 500;
-        white-space: nowrap;
-        padding: 6px 14px;
-        border-radius: 20px;
-        background-color: #f1f5f9;
-        font-size: 12px;
-        color: #64748b;
-    }
+  .pill {
+    font-family: "Suit", sans-serif;
+    font-weight: 500;
+    white-space: nowrap;
+    padding: 6px 14px;
+    border-radius: 20px;
+    background-color: #f1f5f9;
+    font-size: 12px;
+    color: #64748b;
+  }
 
-    .pill.active {
-        background-color: #111a30;
-        color: #ffffff;
-        font-weight: 700;
-    }
+  .pill.active {
+    background-color: #111a30;
+    color: #ffffff;
+    font-weight: 700;
+  }
 
-    #product-grid {
-        grid-template-columns: repeat(2, minmax(0, 1fr));
-        gap: 28px 12px;
-    }
+  #product-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 28px 12px;
+  }
 
-    .card-info {
-        display: flex;
-        flex-direction: column;
-        position: relative;
-        width: 100%;
-    }
+  .card-info {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    width: 100%;
+  }
 
-    /* 💡 하트 아이콘 하나만 남으므로 오른쪽 여백을 28px로 줄여 상품명 표기 공간 최대화 */
-    .card-txt {
-        width: 100%;
-        padding-right: 28px;
-        box-sizing: border-box;
-    }
+  /* 💡 하트 아이콘 하나만 남으므로 오른쪽 여백을 28px로 줄여 상품명 표기 공간 최대화 */
+  .card-txt {
+    width: 100%;
+    padding-right: 28px;
+    box-sizing: border-box;
+  }
 
-    .card-name {
-        font-size: 13px;
-        font-weight: 600;
-        line-height: 1.35;
-        color: #000;
-        margin-bottom: 2px;
-        white-space: nowrap;
-        overflow: hidden;
-        text-overflow: ellipsis;
-    }
+  .card-name {
+    font-size: 13px;
+    font-weight: 600;
+    line-height: 1.35;
+    color: #000;
+    margin-bottom: 2px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
 
-    .card-desc {
-        display: none;
-    }
+  .card-desc {
+    display: none;
+  }
 
-    .price-row {
-        margin-top: 6px;
-        display: flex;
-        align-items: baseline;
-        gap: 4px;
-    }
+  .price-row {
+    margin-top: 6px;
+    display: flex;
+    align-items: baseline;
+    gap: 4px;
+  }
 
-    .card-price {
-        font-size: 14px;
-        font-weight: 700;
-    }
+  .card-price {
+    font-size: 14px;
+    font-weight: 700;
+  }
 
-    .card-price-old {
-        font-size: 11px;
-    }
+  .card-price-old {
+    font-size: 11px;
+  }
 
-    .card-actions {
-        position: absolute;
-        top: 0;
-        right: 0;
-        display: flex;
-        align-items: center;
-    }
+  .card-actions {
+    position: absolute;
+    top: 0;
+    right: 0;
+    display: flex;
+    align-items: center;
+  }
 
-    /* 🚫 🛒 모바일 상품 리스트 섹션에서 장바구니 버튼 숨김 처리 */
-    .card-actions .cart-btn {
-        display: none !important;
-    }
+  /* 🚫 🛒 모바일 상품 리스트 섹션에서 장바구니 버튼 숨김 처리 */
+  .card-actions .cart-btn {
+    display: none !important;
+  }
 
-    .card-name .brand-name {
-        display: none;
-    }
+  .card-name .brand-name {
+    display: none;
+  }
 
-    .card-actions button {
-        width: 20px;
-        height: 20px;
-        display: inline-flex;
-        align-items: center;
-        justify-content: center;
-    }
+  .card-actions button {
+    width: 20px;
+    height: 20px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+  }
 
-    .card-actions i {
-        font-size: 15px;
-    }
+  .card-actions i {
+    font-size: 15px;
+  }
 
-    #pagination {
-        display: none;
-    }
+  #pagination {
+    display: none;
+  }
 
-    #more-btn {
-        font-family: 'Suit', sans-serif;
-        font-weight: 700;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        gap: 8px;
-        width: 100%;
-        margin: 20px auto 40px auto;
-        height: 44px;
-        border: 1px solid #111a30;
-        font-size: 13px;
-        color: #111a30;
-    }
+  #more-btn {
+    font-family: "Suit", sans-serif;
+    font-weight: 700;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    width: 100%;
+    margin: 20px auto 40px auto;
+    height: 44px;
+    border: 1px solid #111a30;
+    font-size: 13px;
+    color: #111a30;
+  }
 
-    .footer-inner {
-        width: 100%;
-        display: flex;
-        flex-direction: column;
-        gap: 40px;
-        padding: 48px 20px;
-    }
+  .footer-inner {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    padding: 48px 20px;
+  }
 
-    #floating {
-        bottom: 20px;
-        right: 20px;
-    }
+  #floating {
+    bottom: 20px;
+    right: 20px;
+  }
 
-    #floating button {
-        width: 38px;
-        height: 38px;
-        font-size: 14px;
-    }
+  #floating button {
+    width: 38px;
+    height: 38px;
+    font-size: 14px;
+  }
 }
